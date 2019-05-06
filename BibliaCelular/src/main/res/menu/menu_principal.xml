@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <!--<item
+            android:id="@+id/novo_testamento"
+            android:icon="@drawable/ic_library_books_black_24dp"
+            android:title="Novo testamento" />
+        <item
+            android:id="@+id/velho_testamento"
+            android:icon="@drawable/ic_collections_bookmark_black_24dp"
+            android:title="Velho Testamento" />-->
+        <item
+            android:id="@+id/oracao_pai_nosso"
+            android:icon="@drawable/ic_loyalty_black_24dp"
+            android:title="Oração do Pai Nosso" />
+       <!-- <item
+            android:id="@+id/salmo_de_hoje"
+            android:icon="@drawable/ic_today_black_24dp"
+            android:title="Salmo de Hoje" />-->
+    </group>
+
+    <item android:title="Opções">
+        <menu>
+            <item
+                android:id="@+id/nav_dicionario"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Dicionário Biblico" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Sobre" />
+
+            <!-- <item
+                 android:id="@+id/nav_share"
+                 android:icon="@drawable/ic_menu_share"
+                 android:title="Biblia Sagrada em Audio" />
+             <item
+                 android:id="@+id/nav_send"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Plano de Leitura" />
+             <item
+                 android:id="@+id/nav_plano"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Radio Gospel" />
+             <item
+                 android:id="@+id/nav_lugares"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Lugares Biblicos" />
+             <item
+                 android:id="@+id/nav_nomes_biblicos"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Nomes Biblico" />-->
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_config"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="200"
+        android:title="Sair"
+        app:showAsAction="never" />
+
+
+</menu>

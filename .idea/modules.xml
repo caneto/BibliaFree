@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppRater/AppRater.iml" filepath="$PROJECT_DIR$/AppRater/AppRater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BibliaCelular/BibliaCelular.iml" filepath="$PROJECT_DIR$/BibliaCelular/BibliaCelular.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BibliaFree.iml" filepath="$PROJECT_DIR$/BibliaFree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swithButton/swithButton.iml" filepath="$PROJECT_DIR$/swithButton/swithButton.iml" />
+    </modules>
+  </component>
+</project>

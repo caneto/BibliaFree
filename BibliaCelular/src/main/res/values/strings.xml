@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name" translatable="false">Biblia Completa</string>
+    <string name="app_title" translatable="false">Biblia Completa</string>
+    <string name="app_versao" translatable="false">1.00</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="action_settings" translatable="false">Configuração</string>
+    <string name="menu_info_display">Mostra informações</string>
+    <string name="dialog_receipt_negative_button">CANCELAR</string>
+    <string name="dialog_receipt_positive_button">OK</string>
+
+    <string name="crash_toast_text" translatable="false">Oooops! Aconteceu um erro, mas um relatório foi gerado, envie para mim, para que se possa solucionar o problema!</string>
+
+    <string name="crash_dialog_title" translatable="false">APP com Erro</string>
+    <string name="crash_dialog_text" translatable="false">Ocorreu um erro inesperado forçando o pedido para parar. Por favor, ajude-nos a corrigir isso, enviando-nos dados de erro, tudo que você precisa fazer é clicar em OK.</string>
+    <string name="crash_dialog_comment_prompt" translatable="false">Você pode adicionar seus comentários sobre o problema abaixo:</string>
+    <string name="crash_dialog_ok_toast" translatable="false">Obrigado !</string>
+    <string name="email_address" translatable="false">cacpnrj@gmail.com</string>
+
+    <string name="t_titulo_principal" translatable="false">Livros</string>
+
+    <string name="shared_preferences_id" translatable="false">brcapsistemabibliacelular</string>
+
+    <!-- Settings Activity -->
+    <string name="title_activity_settings">Configurações</string>
+
+    <string name="shared_json_lido">JsonLido</string>
+    <string name="shared_json_bibliatipo">tipobiblia</string>
+    <string name="shared_marca_ultimo_lido">marcaultimo</string>
+
+    <string name="Key_banner">ca-app-pub-6442160804361052/3358011186</string>
+    <string name="Key_Interstitial">ca-app-pub-6442160804361052/1848049525</string>
+    <string name="Key_App_Ads">ca-app-pub-6442160804361052~8063542956</string>
+    <string name="Key_banner_nativo">ca-app-pub-6442160804361052/3088824321</string>
+
+    <string name="Key_Facebook_Audience">179953286219748_179954026219674</string>
+
+    <string name="email_invalido">Digite um email válido.</string>
+
+    <string name="cadastrando">Cadastrando…</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="empty_nome">Nome de usuário vazio</string>
+    <string name="empty_senha">Digite uma senha válida</string>
+    <string name="empty_email">Digite um email</string>
+    <string name="empty_password_2">Re-digite a senha</string>
+    <string name="senha_8digitos">Mínimo 8 digitos, máximo 16</string>
+    <string name="senha_nao_igual">Segunda senha não conscide com a primeira</string>
+    <string name="error_senha_fraca">Senha fraca!</string>
+    <string name="error_email_invalido">E-mail inválido!</string>
+    <string name="email_ja_exite">E-mail já existente!</string>
+
+    <string name="empty_text">Digite alguma coisa</string>
+    <string name="incorrect_email">Digite um e-mail válido</string>
+    <string name="empty_nome_seriado">Nome do seriado vazio</string>
+    <string name="empty_numero_episodios">Numero de Episodiso vazio!</string>
+    <string name="empty_numero_temporada">Numero da temporada vazio!</string>
+
+
+    <!-- Navigation Drawer -->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="title_activity_navigation_drawer">Biblia Celular</string>
+
+</resources>

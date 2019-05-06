@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TelaVizualizadorText" >
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/card_view">
+        <ScrollView
+            android:id="@+id/ScroolView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:ems="10"
+            android:scrollHorizontally="false"
+            android:layout_below="@+id/card_view">
+
+            <TextView
+                android:id="@+id/txtMostraTexto"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_alignParentRight="true"
+                android:text="
+A oração é uma peça fundamental na vida de qualquer cristão. Orar é falar com Deus, e a comunicação é essencial para que exista intimidade.\n\n
+O Pai Nosso é uma das orações mais conhecidas da Bíblia, pois foi ensinada aos discípulos por Jesus. Não significa que temos que orar e repetir o Pai Nosso todos os dias, mas podemos orar com as nossas próprias palavras, usando esta oração como modelo.\n\n
+
+Por que a oração do Pai Nosso é tão importante?\n\n
+
+Este é o melhor modelo de oração que podemos encontrar na Palavra de Deus, pois encontramos elementos fundamentais do cristianismo:\n\n
+
+adoração (santificado seja o Teu nome);\n
+submissão (seja feita a Tua vontade);\n
+pedido de provisão (dá-nos hoje o nosso pão de cada dia);\n
+pedido de perdão (perdoa as nossas dívidas);\n
+liberação de perdão (assim como perdoamos aos nossos devedores);\n
+pedido de proteção (e não nos deixes cair em tentação, mas livra-nos do mal).\n\n
+
+Oração do Pai Nosso na Bíblia\n\n
+
+Vocês, orem assim:\n
+Pai nosso, que estás nos céus!\n
+  Santificado seja o teu nome. Venha o teu Reino;\n
+  seja feita a tua vontade,\n
+  assim na terra como no céu. Dá-nos hoje o nosso\n
+  pão de cada dia. Perdoa as nossas dívidas,\n
+  assim como perdoamos\n
+  aos nossos devedores. E não nos deixes cair\n
+  em tentação,\n
+  mas livra-nos do mal,\n
+  porque teu é o Reino, o poder e a glória para sempre. Amém.\n
+  Mateus 6:9-13\n\n
+
+Ele lhes disse: Quando vocês orarem, digam:\n
+ Pai!\n
+ Santificado seja o teu nome.\n
+ Venha o teu Reino. Dá-nos cada dia o nosso pão cotidiano. Perdoa-nos os nossos pecados,\n
+ pois também perdoamos\n
+ a todos os que nos devem.\n
+ E não nos deixes cair\n
+ em tentação\n
+Lucas 11:2-4\n"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="     "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_below="@+id/adView_texto"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:text="Oração do Pai Nosso"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

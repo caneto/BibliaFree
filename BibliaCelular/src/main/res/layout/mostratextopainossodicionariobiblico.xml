@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TelaVizualizadorDicionarioBiblico" >
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/card_view">
+        <ScrollView
+            android:id="@+id/ScroolView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:ems="10"
+            android:scrollHorizontally="false"
+            android:layout_below="@+id/card_view">
+
+            <TextView
+                android:id="@+id/txtMostraTexto"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_alignParentRight="true"
+                android:text="
+Vamos convir... O português utilizado nas versões mais comuns de bíblia que temos por aí é muito antigo. Na verdade, as versões Almeida, tanto a Corrigida (A.R.C.) como a Atualizada (A.R.A.) utilizam palavras e expressões que caíram em total desuso nos últimos anos.\n\n
+Por isto, o leitor menos atento (ou menos esforçado) pode encontrar dificuldade ao interpretar alguns textos, uma vez que não busca um dicionário de português para conferir o significado correto de algumas palavras, mas acaba se deixando levar por algum tipo de interpretação própria... Por semelhança com alguma palavra conhecida, geralmente.\n\n
+Este método pode trazer sérios riscos!\n\n
+Mas não se preocupem, caros amigos internautas... Pois este humilde servo vos traz, em primeiríssima mão, uma lista que traduz para um português inteligível algumas palavrinhas complicadas que vocês já devem ter encontrado (ou esperem que leiam o suficiente para encontrar) na Bíblia.\n\n
+Segue...\n\n
+    Anátema (Gálatas 1:8) - Palavra bonitinha né? Mas quer dizer maldição, reprovação (ou maldito, reprovado no caso de ser adjetivo).\n\n
+    Catadupa (Salmo 42:7) - Apesar de fazer lembrar, não é parente da catapulta. Na verdade catadupa é simplesmente uma catarata ou cachoeira.\n\n
+    Concupiscência (1 Pedro 4:2) - Nome complicado para um desejo exagerado, uma ambição.\n\n
+    Éfode (Êxodo 28:4) - Não pensa bobagem! Éfode é uma vestimenta de quatro cores que o sacerdote usava durante as ministrações no templo.\n\n
+    Escabelo (Isaías 66:1) - Não tem nada a ver com o cabelo, pois é um banco para apoiar os pés.\n\n
+    Estola (Isaías 3:19) - Não, não é o Cebolinha falando 'estoura'. Estola é uma peça de roupa, usada pelo sacerdote nos tempos bíblicos e pelos padres hoje em dia.\n\n
+    Estrado (1 Crônicas 28:2) - Já que 'estrada' não tem esposo... Significa a mesma coisa que o 'escabelo' acima.\n\n
+    Ignomínia (Provérbios 18:3) - Nome bonito pra infâmia, desonra.\n\n
+    Iniquidade (Números 14:19) - Um montão de coisa ruim: injustiça, parcialidade, crime... Ausência de moralidade ou espiritualidade...\n\n
+    Jornaleiro (Jó 7:2) - Não, não havia ninguém gritando 'Extra! Extra!' nas esquinas daquele tempo... Esta palavra ainda é utilizada em Portugal para denotar um diarista, uma pessoa que é contratada por um dia de trabalho e paga também.\n\n
+    Mancomunar (Salmo 2:1) - Jeito complicado de dizer que se puseram de acordo, combinaram algo.\n\n
+    Opróbrio (Lucas 1:25) - Palavrinha complicada que significa desonra, injura, infâmia, ignomínia (ah, esta agora tu já sabes o que é!).\n\n
+    Ósculo (1 Tessalonissenses 5:26) - Apesar das suposições, ósculo é um beijo de paz e amizade.\n\n
+    Outeiro (Cantares 2:8) - Esta é fácil, mas não confunda com 'canteiro'. Outeiro é um pequeno monte, uma colina.\n\n
+    Pragana (Joel 2:5) - Pode parecer que tem algo a ver com praga, mas não. Pragana é aquela barba ou casca da espiga dos cereais que não serve pra nada depois da colheita.\n\n
+    Prepúcio (Gênesis 17:11) - Isto aí é o nome que se dá pro anel de pele que cobre a ponta do órgão genital masculino.\n\n
+    Propiciatório (Êxodo 25:21) - Por favor, não confunda com 'prepúcio' que vai dar problema. Propiciatório é a tampa da Arca da Aliança.\n\n
+    Soberba (1 João 2:16) - Palavrinha chique pra orgulho, arrogância e presunção.\n"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="     "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_below="@+id/adView_texto"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:text="Dicionario Biblico"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

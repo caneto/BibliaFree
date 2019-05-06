@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Nivel de Log Local para Analytics -->
+    <string name="ga_logLevel">verbose</string>
+ 
+    <!-- how often the dispatcher should fire -->
+    <integer name="ga_dispatchPeriod">30</integer>
+ 
+    <!-- Treat events as test events and don't send to google -->
+    <bool name="ga_dryRun">false</bool>
+ 
+    <integer name="ga_sessionTimeout">300</integer>
+ 
+    <!-- Nome das telas que irao aparecer nos relatorios do Analytics -->
+    <screenName name="br.cap.sistemas.leistrabalhistas.activity.ActivityInicial">MainActivity</screenName>
+ 
+    <!-- A seguinte linha deverá ser alterada de acordo com o ID da sua Propriedade do Analytics. -->
+    <string name="ga_trackingId">UA-43946207-2</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <android.support.v14.preference.SwitchPreference
+        android:defaultValue="true"
+        android:key="Configuracao0"
+        android:title="Ativa Livros Católicos"
+        android:summary="ativa os 7 livros da Biblia Catolica."
+        app:iconSpaceReserved="false"
+        />
+
+    <android.support.v14.preference.SwitchPreference
+        android:defaultValue="true"
+        android:key="Configuracao1"
+        android:title="Ativa Marcação"
+        android:summary="marcação do Ultimo Livro/Capitulo já visto."
+        app:iconSpaceReserved="false"
+        />
+
+
+</android.support.v7.preference.PreferenceScreen>

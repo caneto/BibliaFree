@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/menu_info_print"
+        android:icon="@drawable/ic_printer"
+        android:title="@string/menu_info_print"
+        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/menu_info_display"
+        android:icon="@drawable/ic_row_info"
+        android:title="@string/menu_info_display"
+        app:showAsAction="always" />
+
+</menu>
