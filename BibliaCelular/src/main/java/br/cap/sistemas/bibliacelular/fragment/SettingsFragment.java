@@ -1,9 +1,9 @@
 package br.cap.sistemas.bibliacelular.fragment;
 
 import android.os.Bundle;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.PreferenceFragmentCompat;
-import android.support.v7.preference.Preference;
+import androidx.preference.SwitchPreference;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.Preference;
 
 import br.cap.sistemas.bibliacelular.R;
 import br.cap.sistemas.bibliacelular.classes.SharedPreferencesUtil;

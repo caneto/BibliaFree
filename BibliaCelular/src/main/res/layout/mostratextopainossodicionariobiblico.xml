@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.TelaVizualizadorDicionarioBiblico" >
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cardview"
         android:layout_gravity="center"
@@ -65,7 +65,7 @@ Segue...\n\n
     Soberba (1 João 2:16) - Palavrinha chique pra orgulho, arrogância e presunção.\n"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </ScrollView>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textView3"
@@ -77,7 +77,7 @@ Segue...\n\n
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_below="@+id/adView_texto"
@@ -99,6 +99,6 @@ Segue...\n\n
             android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

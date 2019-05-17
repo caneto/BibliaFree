@@ -4,7 +4,7 @@ package br.cap.sistemas.bibliacelular.db.tabelas;
  * Created by cap on 03/12/2017.
  */
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 
 import io.realm.RealmObject;

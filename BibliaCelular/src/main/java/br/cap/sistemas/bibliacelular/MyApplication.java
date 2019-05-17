@@ -1,7 +1,7 @@
 package br.cap.sistemas.bibliacelular;
 
 import android.content.Context;
-import android.support.multidex.MultiDexApplication;
+import androidx.multidex.MultiDexApplication;
 
 import com.splunk.mint.Mint;
 

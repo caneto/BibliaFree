@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.preference.PreferenceScreen
+<androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-   <android.support.v14.preference.SwitchPreference
+   <androidx.preference.SwitchPreference
         android:defaultValue="true"
         android:key="Configuracao0"
         android:title="Ativa Livros Católicos"
@@ -11,7 +11,7 @@
         app:iconSpaceReserved="false"
         />
 
-    <android.support.v14.preference.SwitchPreference
+    <androidx.preference.SwitchPreference
         android:defaultValue="true"
         android:key="Configuracao1"
         android:title="Ativa Marcação"
@@ -20,4 +20,4 @@
         />
 
 
-</android.support.v7.preference.PreferenceScreen>
+</androidx.preference.PreferenceScreen>

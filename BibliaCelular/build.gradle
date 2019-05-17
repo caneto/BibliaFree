@@ -3,8 +3,7 @@ apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '28.0.3'
-
+    
     defaultConfig {
         applicationId "br.cap.sistemas.bibliacelular"
         minSdkVersion 16
@@ -48,13 +47,13 @@ dependencies {
 
 
     //Android
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:support-v4:28.0.0'
-    implementation 'com.android.support:cardview-v7:28.0.0'
-    implementation 'com.android.support:recyclerview-v7:28.0.0'
-    implementation 'com.android.support:preference-v7:28.0.0'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.preference:preference:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.takisoft.fix:preference-v7:28.0.0.0'
 
     // Libs

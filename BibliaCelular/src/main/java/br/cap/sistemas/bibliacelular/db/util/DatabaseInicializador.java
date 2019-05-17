@@ -1,6 +1,6 @@
 package br.cap.sistemas.bibliacelular.db.util;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import br.cap.sistemas.bibliacelular.db.AppDatabase;
 import br.cap.sistemas.bibliacelular.db.tabelas.BibliaTitulos;
