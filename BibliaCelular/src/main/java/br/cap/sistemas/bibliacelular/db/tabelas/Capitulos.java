@@ -5,19 +5,23 @@ package br.cap.sistemas.bibliacelular.db.tabelas;
  */
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "capitulos")
+public class Capitulos {
 
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
-
-public class Capitulos extends RealmObject {
-
-    @PrimaryKey
     @NonNull
+    @PrimaryKey(autoGenerate = true)
     private int id;
+    @ColumnInfo(name = "id_titulo")
     private int id_titulo;
+    @ColumnInfo(name = "capitulo")
     private String capitulo;
+    @ColumnInfo(name = "arquivo")
     private String arquivo;
+    @ColumnInfo(name = "audio")
     private String audio;
 
     @NonNull
@@ -60,5 +64,4 @@ public class Capitulos extends RealmObject {
     public void setAudio(String audio) {
         this.audio = audio;
     }
-
 }

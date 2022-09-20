@@ -1,121 +1,39 @@
 package br.cap.sistemas.bibliacelular.db.tabelas;
 
+import androidx.room.Dao;
+import androidx.room.Delete;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
+
+import java.util.List;
+
 /**
- * Created by cap on 03/12/2017.
+ * Created by cap on 20/09/2022
  */
 
-import io.realm.Realm;
-import io.realm.RealmResults;
-import io.realm.internal.IOException;
+@Dao
+public interface BibliaTitulosDao {
 
-public class BibliaTitulosDao {
+    @Query("SELECT * FROM bibliatitulos")
+    List<BibliaTitulos> getAll();
 
-    public BibliaTitulos getBibliaTituloPorId(String Id) {
-        Realm realm = Realm.getDefaultInstance();
+    @Query("SELECT * FROM bibliatitulos WHERE id IN (:bibliatitulosIds)")
+    List<BibliaTitulos> loadAllByIds(int[] bibliatitulosIds);
 
-        try {
-            BibliaTitulos seriados = realm.where(BibliaTitulos.class)
-                    .beginsWith("id", Id).findFirst();
+    @Query("SELECT COUNT(id) FROM bibliatitulos")
+    int getCount();
 
-            // Check if the data is not null, if null there is no user with these Id
-            if (seriados == null) {
-                return null;
-            }
+    @Insert
+    void insert(BibliaTitulos... bibliaTitulos);
 
-            return seriados;
+    @Update
+    void update(BibliaTitulos... bibliaTitulos);
 
-        } catch (Exception e) {
-            // print the error
-            e.printStackTrace();
+    @Delete
+    void delete(BibliaTitulos bibliaTitulos);
 
-        }
-
-        return null;
-    }
-
-    public RealmResults<BibliaTitulos> getAll() {
-        Realm realm = Realm.getDefaultInstance();
-        try {
-            RealmResults<BibliaTitulos> results = realm.where(BibliaTitulos.class)
-                    .findAll();
-
-            if (results == null || results.size() == 0) {
-                return null;
-            }
-
-            return results;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
-
-    public RealmResults<BibliaTitulos> getAllLivro(String Livro) {
-        Realm realm = Realm.getDefaultInstance();
-        try {
-            RealmResults<BibliaTitulos> results = realm.where(BibliaTitulos.class)
-                    .beginsWith("livro", Livro)
-                    .findAll();
-
-            if (results == null || results.size() == 0) {
-                return null;
-            }
-
-            return results;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
-
-
-    public BibliaTitulos getLivro(String titulo) {
-        Realm realm = Realm.getDefaultInstance();
-        try {
-            BibliaTitulos results = realm.where(BibliaTitulos.class)
-                    .beginsWith("nometitulo", titulo)
-                    .findFirst();
-
-            if (results == null) {
-                return null;
-            }
-
-            return results;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-    }
-
-    public void salvaBiblia(BibliaTitulos biblia) {
-        saveOrUpdate(biblia);
-    }
-
-    protected void saveOrUpdate(BibliaTitulos biblia) {
-        Realm realm = Realm.getDefaultInstance();
-        try {
-            //save ususario on realm
-            realm.beginTransaction();
-            realm.copyToRealmOrUpdate(biblia);
-            realm.commitTransaction();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void delAll() {
-        Realm realm = Realm.getDefaultInstance();
-
-        try {
-            realm.beginTransaction(); // open a transation
-            realm.delete(BibliaTitulos.class); // delete the data
-            realm.commitTransaction(); // close the transation
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-
-        }
-
-    }
+    @Query("DELETE FROM bibliatitulos")
+    void deleteAllRegisterBibliaTitulos();
 
 }
