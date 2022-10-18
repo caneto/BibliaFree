@@ -2,13 +2,11 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:bibliafree/src/ui/components/streaks_card.dart';
-import 'package:bibliafree/src/ui/views/profile_view/components/about_card.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/bookmarks_card.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/favorite_verses_card.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/privacy_policy_card.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/profile_view_header.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/settings_card.dart';
-import 'package:bibliafree/src/ui/views/profile_view/components/support_card.dart';
 
 class ProfileView extends ConsumerWidget {
   const ProfileView({Key? key}) : super(key: key);
@@ -54,14 +52,6 @@ class ProfileView extends ConsumerWidget {
           child: const SettingsCard(),
         ),
         const SizedBox(height: 17),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 500),
-          child: const AboutCard(),
-        ),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 500),
-          child: const SupportCard(),
-        ),
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 500),
           child: const PrivacyPolicyCard(),
