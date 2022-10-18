@@ -1,0 +1,525 @@
+{
+  "biblia": [
+    {
+      "nome": "Velho Testamento",
+      "titulos": [
+        {
+          "id": "1",
+          "titulo": "Gênesis",
+          "capitulos":"50",
+		  "livro":"T",
+		  "diretorio":"01Genesis"
+        },
+        {
+          "id": "2",
+          "titulo": "Êxodo",
+          "capitulos":"40",
+		  "livro":"T",
+		  "diretorio":"02Exodo"		  
+        },
+        {
+          "id": "3",
+          "titulo": "Levítico",
+          "capitulos":"27",
+		  "livro":"T",
+		  "diretorio":"03Levitico"		  
+        },
+        {
+          "id": "4",
+          "titulo": "Números",
+          "capitulos":"36",
+		  "livro":"T",
+		  "diretorio":"04Numeros"
+        },
+        {
+          "id": "5",
+          "titulo": "Deuteronômio",
+          "capitulos":"34",
+		  "livro":"T",
+		  "diretorio":"05Deuteronomio"
+        },
+        {
+          "id": "6",
+          "titulo": "Josué",
+          "capitulos":"24",
+		  "livro":"T",
+		  "diretorio":"06Josueh"
+        },
+        {
+          "id": "7",
+          "titulo": "Juízes",
+          "capitulos":"21",
+		  "livro":"T",
+		  "diretorio":"07Juizes"
+        },
+        {
+          "id": "8",
+          "titulo": "Rute",
+          "capitulos":"4",
+		  "livro":"T",
+		  "diretorio":"08Rute"
+        },
+        {
+          "id": "9",
+          "titulo": "I Samuel",
+          "capitulos":"31",
+		  "livro":"T",
+		  "diretorio":"09ISamuel"
+        },
+        {
+          "id": "10",
+          "titulo": "II Samuel",
+          "capitulos":"24",
+		  "livro":"T",
+		  "diretorio":"10IISamuel"
+        },
+        {
+          "id": "11",
+          "titulo": "I Reís",
+          "capitulos":"22",
+		  "livro":"T",
+		  "diretorio":"11IReis"
+        },
+        {
+          "id": "12",
+          "titulo": "II Reís",
+          "capitulos":"25",
+		  "livro":"T",
+		  "diretorio":"12IIReis"
+        },
+        {
+          "id": "13",
+          "titulo": "I Crônicas",
+          "capitulos":"29",
+		  "livro":"T",
+		  "diretorio":"13ICronicas"
+        },
+        {
+          "id": "14",
+          "titulo": "II Crônicas",
+          "capitulos":"36",
+		  "livro":"T",
+		  "diretorio":"14IICronicas"
+        },
+        {
+          "id": "15",
+          "titulo": "Esdras",
+          "capitulos":"10",
+		  "livro":"T",
+		  "diretorio":"15Esdras"
+        },
+        {
+          "id": "16",
+          "titulo": "Neemias",
+          "capitulos":"13",
+		  "livro":"T",
+		  "diretorio":"16Neemias"
+        },
+		{
+          "id": "17",
+          "titulo": "Tobias",
+          "capitulos":"14",
+		  "livro":"C",
+		  "diretorio":"17Tobias"
+        },
+		{
+          "id": "18",
+          "titulo": "Judite",
+          "capitulos":"16",
+		  "livro":"C",
+		  "diretorio":"18Judite"
+        },
+        {
+          "id": "19",
+          "titulo": "Ester",
+          "capitulos":"10",
+		  "livro":"T",
+		  "diretorio":"19Ester"
+        },
+        {
+          "id": "20",
+          "titulo": "Jó",
+          "capitulos":"42",
+		  "livro":"T",
+		  "diretorio":"20Joh"
+        },
+        {
+          "id": "21",
+          "titulo": "Salmos",
+          "capitulos":"150",
+		  "livro":"T",
+		  "diretorio":"21Salmos"
+        },
+		{
+          "id": "22",
+          "titulo": "I Macabeus",
+          "capitulos":"16",
+		  "livro":"C",
+		  "diretorio":"22IMacabeus"
+        },
+		{
+          "id": "23",
+          "titulo": "II Macabeus",
+          "capitulos":"15",
+		  "livro":"C",
+		  "diretorio":"23IIMacabeus"
+        },
+        {
+          "id": "24",
+          "titulo": "Provérbios",
+          "capitulos":"31",
+		  "livro":"T",
+		  "diretorio":"24Proverbios"
+        },
+        {
+          "id": "25",
+          "titulo": "Eclesiastes",
+          "capitulos":"12",
+		  "livro":"T",
+		  "diretorio":"25Eclesiastes"		  
+        },
+        {
+          "id": "26",
+          "titulo": "Cântico dos Cânticos",
+          "capitulos":"8",
+		  "livro":"T",
+		  "diretorio":"26CanticodosCanticos"
+        },
+        {
+          "id": "27",
+          "titulo": "Sabedoria",
+          "capitulos":"19",
+		  "livro":"C",
+		  "diretorio":"27Sabedoria"
+        },
+		{
+          "id": "28",
+          "titulo": "Eclesiatico",
+          "capitulos":"51",
+		  "livro":"C",
+		  "diretorio":"28Eclesiatico"
+        },		
+        {
+          "id": "29",
+          "titulo": "Isaías",
+          "capitulos":"66",
+		  "livro":"T",
+		  "diretorio":"29Isaías"
+        },
+        {
+          "id": "30",
+          "titulo": "Jeremias",
+          "capitulos":"52",
+		  "livro":"T",
+		  "diretorio":"30Jeremias"
+        },
+        {
+          "id": "31",
+          "titulo": "Lamentações",
+          "capitulos":"5",
+		  "livro":"T",
+		  "diretorio":"31Lamentacoes"
+        },
+		{
+          "id": "32",
+          "titulo": "Baruc",
+          "capitulos":"6",
+		  "livro":"C",
+		  "diretorio":"32Baruc"
+        },
+        {
+          "id": "33",
+          "titulo": "Ezequiel",
+          "capitulos":"48",
+		  "livro":"T",
+		  "diretorio":"33Ezequiel"
+        },
+        {
+          "id": "34",
+          "titulo": "Daniel",
+          "capitulos":"14",
+		  "livro":"T",
+		  "diretorio":"34Daniel"
+        },
+        {
+          "id": "35",
+          "titulo": "Oséias",
+          "capitulos":"14",
+		  "livro":"T",
+		  "diretorio":"35Oseias"
+        },
+        {
+          "id": "36",
+          "titulo": "Joel",
+          "capitulos":"4",
+		  "livro":"T",
+		  "diretorio":"36Joel"
+        },
+        {
+          "id": "37",
+          "titulo": "Amós",
+          "capitulos":"9",
+		  "livro":"T",
+		  "diretorio":"37Amos"
+        },
+        {
+          "id": "38",
+          "titulo": "Obadias",
+          "capitulos":"1",
+		  "livro":"T",
+		  "diretorio":"38Abdias"
+        },
+        {
+          "id": "39",
+          "titulo": "Jonas",
+          "capitulos":"4",
+		  "livro":"T",
+		  "diretorio":"39Jonas"
+        },
+        {
+          "id": "40",
+          "titulo": "Miquéias",
+          "capitulos":"7",
+		  "livro":"T",
+		  "diretorio":"40Miqueias"
+        },
+        {
+          "id": "41",
+          "titulo": "Naum",
+          "capitulos":"3",
+		  "livro":"T",
+		  "diretorio":"41Naum"
+        },
+        {
+          "id": "42",
+          "titulo": "Habacuque",
+          "capitulos":"3",
+		  "livro":"T",
+		  "diretorio":"42Habacuc"
+        },
+        {
+          "id": "43",
+          "titulo": "Sofonias",
+          "capitulos":"3",
+		  "livro":"T",
+		  "diretorio":"43Sofonias"
+        },
+        {
+          "id": "44",
+          "titulo": "Ageu",
+          "capitulos":"2",
+		  "livro":"T",
+		  "diretorio":"44Ageu"
+        },
+        {
+          "id": "45",
+          "titulo": "Zacarias",
+          "capitulos":"14",
+		  "livro":"T",
+		  "diretorio":"45Zacarias"
+        },
+        {
+          "id": "46",
+          "titulo": "Malaquias",
+          "capitulos":"4",
+		  "livro":"T",
+		  "diretorio":"46Malaquias"
+        }
+      ]
+    },
+    {
+      "nome": "Novo Testamento",
+      "titulos": [
+        {
+          "id": "47",
+          "titulo": "Mateus",
+          "capitulos":"28",
+		  "livro":"T",
+		  "diretorio":"47Mateus"
+        },
+        {
+          "id": "48",
+          "titulo": "Marcos",
+          "capitulos":"16",
+		  "livro":"T",
+		  "diretorio":"48Marcos"
+        },
+        {
+          "id": "49",
+          "titulo": "Lucas",
+          "capitulos":"24",
+		  "livro":"T",
+		  "diretorio":"49Lucas"
+        },
+        {
+          "id": "50",
+          "titulo": "João",
+          "capitulos":"21",
+		  "livro":"T",
+		  "diretorio":"50Joao"
+        },
+        {
+          "id": "51",
+          "titulo": "Atos dos Apóstolos",
+          "capitulos":"28",
+		  "livro":"T",
+		  "diretorio":"51AtosdosApostolos"
+        },
+        {
+          "id": "52",
+          "titulo": "Romanos",
+          "capitulos":"16",
+		  "livro":"T",
+		  "diretorio":"52Romanos"
+        },
+        {
+          "id": "53",
+          "titulo": "I Coríntios",
+          "capitulos":"16",
+		  "livro":"T",
+		  "diretorio":"53ICorintios"
+        },
+        {
+          "id": "54",
+          "titulo": "II Coríntios",
+          "capitulos":"13",
+		  "livro":"T",
+		  "diretorio":"54IICorintios"
+        },
+        {
+          "id": "55",
+          "titulo": "Gálatas",
+          "capitulos":"6",
+		  "livro":"T",
+		  "diretorio":"55Galatas"
+        },
+        {
+          "id": "56",
+          "titulo": "Efésios",
+          "capitulos":"6",
+		  "livro":"T",
+		  "diretorio":"56Efesios"
+        },
+        {
+          "id": "57",
+          "titulo": "Filipenses",
+          "capitulos":"4",
+		  "livro":"T",
+		  "diretorio":"57Filipenses"
+        },
+        {
+          "id": "58",
+          "titulo": "Colossenses",
+          "capitulos":"4",
+		  "livro":"T",
+		  "diretorio":"58Colossenses"
+        },
+        {
+          "id": "59",
+          "titulo": "I Tessalonicenses",
+          "capitulos":"5",
+		  "livro":"T",
+		  "diretorio":"59ITessalonicenses"
+        },
+        {
+          "id": "60",
+          "titulo": "II Tessalonicenses",
+          "capitulos":"3",
+		  "livro":"T",
+		  "diretorio":"60IITessalonicenses"
+        },
+        {
+          "id": "61",
+          "titulo": "I Timóteo",
+          "capitulos":"6",
+		  "livro":"T",
+		  "diretorio":"61ITimoteo"
+        },
+        {
+          "id": "62",
+          "titulo": "II Timóteo",
+          "capitulos":"4",
+		  "livro":"T",
+		  "diretorio":"62IITimoteo"
+        },
+        {
+          "id": "63",
+          "titulo": "Tito",
+          "capitulos":"3",
+		  "livro":"T",
+		  "diretorio":"63Tito"
+        },
+        {
+          "id": "64",
+          "titulo": "Filemon",
+          "capitulos":"1",
+		  "livro":"T",
+		  "diretorio":"64Filemon"
+        },
+        {
+          "id": "65",
+          "titulo": "Hebreus",
+          "capitulos":"13",
+		  "livro":"T",
+		  "diretorio":"65Hebreus"
+        },
+        {
+          "id": "66",
+          "titulo": "Tiago",
+          "capitulos":"5",
+		  "livro":"T",
+		  "diretorio":"66Tiago"
+        },
+        {
+          "id": "67",
+          "titulo": "I Pedro",
+          "capitulos":"5",
+		  "livro":"T",
+		  "diretorio":"67IPedro"
+        },
+        {
+          "id": "68",
+          "titulo": "II Pedro",
+          "capitulos":"3",
+		  "livro":"T",
+		  "diretorio":"68IIPedro"
+        },
+        {
+          "id": "69",
+          "titulo": "I João",
+          "capitulos":"5",
+		  "livro":"T",
+		  "diretorio":"69IJoao"
+        },
+        {
+          "id": "70",
+          "titulo": "II João",
+          "capitulos":"1",
+		  "livro":"T",
+		  "diretorio":"70IIJoao"
+        },
+        {
+          "id": "71",
+          "titulo": "III João",
+          "capitulos":"1",
+		  "livro":"T",
+		  "diretorio":"71IIIJoao"
+        },
+        {
+          "id": "72",
+          "titulo": "Judas",
+          "capitulos":"1",
+		  "livro":"T",
+		  "diretorio":"72Judas"
+        },
+        {
+          "id": "73",
+          "titulo": "Apocalipse",
+          "capitulos":"22",
+		  "livro":"T",
+		  "diretorio":"73Apocalipse"
+        }
+      ]
+    }    
+  ]
+}
