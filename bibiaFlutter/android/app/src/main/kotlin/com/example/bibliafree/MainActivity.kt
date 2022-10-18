@@ -1,4 +1,4 @@
-package com.elisha.app
+package com.bibliafree.app
 
 import io.flutter.embedding.android.FlutterActivity
 

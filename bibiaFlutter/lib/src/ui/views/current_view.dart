@@ -1,34 +1,16 @@
-/*
-Elisha iOS & Android App
-Copyright (C) 2022 Carlton Aikins
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-
 import 'package:canton_ui/canton_ui.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:elisha/src/config/bottom_navigation_bar.dart';
-import 'package:elisha/src/providers/last_translation_book_chapter_provider.dart';
-import 'package:elisha/src/providers/reader_settings_repository_provider.dart';
-import 'package:elisha/src/providers/streaks_repository_provider.dart';
-import 'package:elisha/src/providers/study_tools_repository_provider.dart';
-import 'package:elisha/src/ui/views/bible_view/bible_view.dart';
-import 'package:elisha/src/ui/views/church_view/church_view.dart';
-import 'package:elisha/src/ui/views/home_view/home_view.dart';
-import 'package:elisha/src/ui/views/profile_view/profile_view.dart';
+import 'package:bibliafree/src/config/bottom_navigation_bar.dart';
+import 'package:bibliafree/src/providers/last_translation_book_chapter_provider.dart';
+import 'package:bibliafree/src/providers/reader_settings_repository_provider.dart';
+import 'package:bibliafree/src/providers/streaks_repository_provider.dart';
+import 'package:bibliafree/src/providers/study_tools_repository_provider.dart';
+import 'package:bibliafree/src/ui/views/bible_view/bible_view.dart';
+import 'package:bibliafree/src/ui/views/church_view/church_view.dart';
+import 'package:bibliafree/src/ui/views/home_view/home_view.dart';
+import 'package:bibliafree/src/ui/views/profile_view/profile_view.dart';
 
 final _homeNavigatorKey = GlobalKey<NavigatorState>();
 final _bibleNavigatorKey = GlobalKey<NavigatorState>();

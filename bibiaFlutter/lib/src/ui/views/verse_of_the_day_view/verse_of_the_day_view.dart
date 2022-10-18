@@ -4,12 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
-import 'package:elisha/src/models/verse.dart';
-import 'package:elisha/src/providers/ad_state_provider.dart';
-import 'package:elisha/src/providers/local_user_repository_provider.dart';
-import 'package:elisha/src/providers/reader_settings_repository_provider.dart';
-import 'package:elisha/src/providers/study_tools_repository_provider.dart';
-import 'package:elisha/src/services/ad_state.dart';
+import 'package:bibliafree/src/models/verse.dart';
+import 'package:bibliafree/src/providers/local_user_repository_provider.dart';
+import 'package:bibliafree/src/providers/reader_settings_repository_provider.dart';
+import 'package:bibliafree/src/providers/study_tools_repository_provider.dart';
 
 class VerseOfTheDayView extends ConsumerStatefulWidget {
   const VerseOfTheDayView({Key? key, required this.verses}) : super(key: key);

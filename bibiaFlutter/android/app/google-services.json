@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "304606692724",
-    "project_id": "elisha-17e64",
-    "storage_bucket": "elisha-17e64.appspot.com"
+    "project_id": "blbiafree-17e64",
+    "storage_bucket": "bibliafree-17e64.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:304606692724:android:98115527bebc398e6c5821",
         "android_client_info": {
-          "package_name": "com.elisha.app"
+          "package_name": "com.bibliafree.app"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "304606692724-pivath4gfe96e0gnh08q252c2bfjvdrg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.elisha.app",
+            "package_name": "com.bibliafree.app",
             "certificate_hash": "55548240b49b269ef319bf7efb4894c733b7e750"
           }
         },

@@ -1,12 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.elisha.app">
+    package="com.bibliafree.app">
    <application
-        android:label="Elisha"
+        android:label="BibliaFree"
         android:icon="@mipmap/ic_launcher">
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6026970342993334~4389449410"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
