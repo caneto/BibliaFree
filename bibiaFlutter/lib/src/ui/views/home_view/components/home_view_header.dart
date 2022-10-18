@@ -1,8 +1,7 @@
-
 import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:elisha/src/providers/local_user_repository_provider.dart';
+import 'package:bibliafree/src/providers/local_user_repository_provider.dart';
 
 class HomeViewHeader extends ConsumerWidget {
   const HomeViewHeader({Key? key}) : super(key: key);
