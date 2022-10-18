@@ -1,21 +1,3 @@
-/*
-Elisha iOS & Android App
-Copyright (C) 2022 Carlton Aikins
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-
 import 'dart:io';
 
 import 'package:canton_ui/canton_ui.dart';
@@ -26,12 +8,12 @@ import 'package:intl/intl.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
-import 'package:elisha/src/models/local_user.dart';
-import 'package:elisha/src/providers/local_user_repository_provider.dart';
-import 'package:elisha/src/ui/views/current_view.dart';
-import 'package:elisha/src/ui/views/introduction_view/components/birth_date_input.dart';
-import 'package:elisha/src/ui/views/introduction_view/components/first_name_input.dart';
-import 'package:elisha/src/ui/views/introduction_view/components/last_name_input.dart';
+import 'package:bibliafree/src/models/local_user.dart';
+import 'package:bibliafree/src/providers/local_user_repository_provider.dart';
+import 'package:bibliafree/src/ui/views/current_view.dart';
+import 'package:bibliafree/src/ui/views/introduction_view/components/birth_date_input.dart';
+import 'package:bibliafree/src/ui/views/introduction_view/components/first_name_input.dart';
+import 'package:bibliafree/src/ui/views/introduction_view/components/last_name_input.dart';
 
 class IntroductionView extends ConsumerStatefulWidget {
   const IntroductionView({Key? key}) : super(key: key);
@@ -205,7 +187,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
         Column(
           children: [
             Text(
-              'Welcome to Elisha',
+              'Welcome to bibliafree',
               style: Theme.of(context).textTheme.headline4,
             ),
             const SizedBox(height: 10),
@@ -249,7 +231,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
         Column(
           children: [
             Text(
-              'Welcome to Elisha',
+              'Welcome to bibliafree',
               style: Theme.of(context).textTheme.headline4?.copyWith(fontSize: 27),
             ),
             const SizedBox(height: 10),

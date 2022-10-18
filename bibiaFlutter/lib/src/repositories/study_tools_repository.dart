@@ -1,29 +1,11 @@
-/*
-Elisha iOS & Android App
-Copyright (C) 2022 Carlton Aikins
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
 import 'package:hive/hive.dart';
 
-import 'package:elisha/src/models/chapter.dart';
-import 'package:elisha/src/models/verse.dart';
+import 'package:bibliafree/src/models/chapter.dart';
+import 'package:bibliafree/src/models/verse.dart';
 
 class StudyToolsRepository extends ChangeNotifier {
   var _favoritedVerses = <Verse>[];
@@ -65,7 +47,7 @@ class StudyToolsRepository extends ChangeNotifier {
   }
 
   Future<void> _saveData() async {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
 
     List<String> favChapters = _favoritedVerses.map((e) => json.encode(e.toMap())).toList();
     List<String> bkChapters = _bookmarkedChapters.map((e) => json.encode(e.toMap())).toList();
@@ -76,7 +58,7 @@ class StudyToolsRepository extends ChangeNotifier {
   }
 
   void loadData() {
-    var box = Hive.box('elisha');
+    var box = Hive.box('bibliafree');
 
     /// Removes all [Chapters] (s) from device.
     // box.delete('studied_chapters');

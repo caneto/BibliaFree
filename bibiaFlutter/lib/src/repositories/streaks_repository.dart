@@ -1,26 +1,8 @@
-/*
-Elisha iOS & Android App
-Copyright (C) 2022 Carlton Aikins
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-
 import 'package:flutter/material.dart';
 
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'package:elisha/src/repositories/local_user_repository.dart';
+import 'package:bibliafree/src/repositories/local_user_repository.dart';
 
 class StreaksRepository extends ChangeNotifier {
   var _currentStreak = 1;
@@ -32,28 +14,28 @@ class StreaksRepository extends ChangeNotifier {
   int get perfectWeeks => _perfectWeeks;
 
   Future<void> _incrementStreak() async {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
     _currentStreak++;
     await box.put('current_streak', _currentStreak);
     notifyListeners();
   }
 
   Future<void> _incrementBestStreak() async {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
     _bestStreak++;
     await box.put('best_streak', _bestStreak);
     notifyListeners();
   }
 
   Future<void> _incrementPerfectWeeks() async {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
     _perfectWeeks++;
     await box.put('perfect_weeks', _perfectWeeks);
     notifyListeners();
   }
 
   Future<void> _resetCurrentStreak() async {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
 
     _currentStreak = 1;
     await box.put('current_streak', _currentStreak);
@@ -61,7 +43,7 @@ class StreaksRepository extends ChangeNotifier {
   }
 
   void _loadData() {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
 
     _currentStreak = box.get('current_streak', defaultValue: 1);
     _bestStreak = box.get('best_streak', defaultValue: 1);
@@ -71,7 +53,7 @@ class StreaksRepository extends ChangeNotifier {
   Future<void> updateStreaks() async {
     _loadData();
 
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
 
     final now = DateTime.now();
 

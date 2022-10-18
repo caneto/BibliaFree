@@ -13,8 +13,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:device_preview_screenshot/device_preview_screenshot.dart';
 
-import 'package:elisha/src/config/constants.dart';
-import 'package:elisha/src/ui/views/login_wrapper.dart';
+import 'package:bibliafree/src/config/constants.dart';
+import 'package:bibliafree/src/ui/views/login_wrapper.dart';
 
 void main() async {
   runZonedGuarded<Future<void>>(() async {
@@ -23,7 +23,7 @@ void main() async {
     await Firebase.initializeApp();
 
     await Hive.initFlutter();
-    await Hive.openBox('elisha');
+    await Hive.openBox('bibliafree');
 
     if (kDebugMode) {
       await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
@@ -41,7 +41,7 @@ void main() async {
           DevicePreviewScreenshot(),
         ],
         builder: (context) => const ProviderScope(
-          child: ElishaApp(),
+          child: bibliafreeApp(),
         ),
       ),
     );
@@ -50,8 +50,8 @@ void main() async {
   });
 }
 
-class ElishaApp extends ConsumerWidget {
-  const ElishaApp({Key? key}) : super(key: key);
+class bibliafreeApp extends ConsumerWidget {
+  const bibliafreeApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

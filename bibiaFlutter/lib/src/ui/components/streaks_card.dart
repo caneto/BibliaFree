@@ -2,7 +2,7 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
-import 'package:elisha/src/providers/streaks_repository_provider.dart';
+import 'package:bibliafree/src/providers/streaks_repository_provider.dart';
 
 class StreaksCard extends ConsumerWidget {
   const StreaksCard({Key? key, required this.marginalPadding}) : super(key: key);

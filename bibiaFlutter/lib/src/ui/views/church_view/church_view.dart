@@ -1,11 +1,9 @@
 import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:elisha/src/providers/ad_state_provider.dart';
-import 'package:elisha/src/services/ad_state.dart';
-import 'package:elisha/src/ui/components/sunday_mass_card.dart';
-import 'package:elisha/src/ui/views/church_view/components/church_view_header.dart';
-import 'package:elisha/src/ui/views/church_view/components/daily_readings_card.dart';
+import 'package:bibliafree/src/ui/components/sunday_mass_card.dart';
+import 'package:bibliafree/src/ui/views/church_view/components/church_view_header.dart';
+import 'package:bibliafree/src/ui/views/church_view/components/daily_readings_card.dart';
 
 class ChurchView extends ConsumerStatefulWidget {
   const ChurchView({Key? key}) : super(key: key);
