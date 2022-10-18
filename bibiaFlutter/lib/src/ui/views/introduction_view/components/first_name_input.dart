@@ -13,7 +13,7 @@ class FirstNameInput extends ConsumerWidget {
       width: MediaQuery.of(context).size.width / 2 - 44,
       child: CantonTextInput(
         hintText: '',
-        labelText: 'First Name',
+        labelText: 'Primeiro nome',
         isTextFormField: true,
         obscureText: false,
         controller: firstNameController,

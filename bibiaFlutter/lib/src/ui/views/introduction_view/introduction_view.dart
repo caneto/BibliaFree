@@ -88,7 +88,7 @@ class _IntroductionViewState extends ConsumerState<IntroductionView> {
             borderRadius: BorderRadius.circular(30),
           ),
           child: Text(
-            'Next',
+            'Proximo',
             style: Theme.of(context).textTheme.button?.copyWith(
                   color: Theme.of(context).colorScheme.onBackground,
                 ),
@@ -101,7 +101,7 @@ class _IntroductionViewState extends ConsumerState<IntroductionView> {
             borderRadius: BorderRadius.circular(30),
           ),
           child: Text(
-            'Next',
+            'Proximo',
             style: Theme.of(context).textTheme.button?.copyWith(
                   color: Theme.of(context).colorScheme.onBackground,
                 ),
@@ -109,20 +109,20 @@ class _IntroductionViewState extends ConsumerState<IntroductionView> {
         ),
         pages: [
           PageViewModel(
-            title: 'Read the Bible',
-            body: 'Read 5 versions of the Bible, Bookmark chapters and Favorite verses.',
+            title: 'Leia a Bíblia',
+            body: 'Leia 5 versões da Bíblia, capítulos Bookmark e versículos favoritos.',
             image: _buildImage(LineAwesomeIcons.bible),
             decoration: _pageDecoration(),
           ),
           PageViewModel(
-            title: 'Church',
-            body: 'Go to Church with Sunday Mass and Daily Readings.',
+            title: 'Igreja',
+            body: 'Vá à Igreja com Missa Dominical e Leituras Diárias.',
             image: _buildImage(LineAwesomeIcons.church),
             decoration: _pageDecoration(),
           ),
           PageViewModel(
-            title: 'Interactive Features',
-            body: 'Streaks, Verse of the Day, and more!',
+            title: 'Recursos interativos',
+              body: 'Faixas, Versículo do Dia e muito mais!',
             image: _buildImage(LineAwesomeIcons.hand_pointing_up),
             decoration: _pageDecoration(),
           ),
@@ -187,12 +187,12 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
         Column(
           children: [
             Text(
-              'Welcome to bibliafree',
+              'Bem Vindo a BibliaFree',
               style: Theme.of(context).textTheme.headline4,
             ),
             const SizedBox(height: 10),
             Text(
-              'Please fill out the following fields.',
+              'Faixas, Versículo do Dia e muito mais!',
               style: Theme.of(context).textTheme.headline6,
             ),
           ],
@@ -210,7 +210,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
         const SizedBox(height: 30),
         _validate
             ? Text(
-                'Please fill out the remaining fields',
+                'Por favor, preencha os campos restantes',
                 style: Theme.of(context).textTheme.headline6?.copyWith(
                       color: Theme.of(context).colorScheme.error,
                     ),
@@ -231,12 +231,12 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
         Column(
           children: [
             Text(
-              'Welcome to bibliafree',
+              'Bem Vindo a BibliaFree',
               style: Theme.of(context).textTheme.headline4?.copyWith(fontSize: 27),
             ),
             const SizedBox(height: 10),
             Text(
-              'Please fill out the following fields.',
+              'Por favor, preencha os seguintes campos.',
               style: Theme.of(context).textTheme.headline6?.copyWith(fontSize: 24),
             ),
           ],
@@ -263,7 +263,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
         const SizedBox(height: 30),
         _validate
             ? Text(
-                'Please fill out the remaining fields',
+                'Por favor, preencha os campos restantes',
                 style: Theme.of(context).textTheme.headline6?.copyWith(
                       color: Theme.of(context).colorScheme.error,
                     ),
@@ -298,7 +298,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 27),
                   child: Text(
-                    'Select Your Birthday',
+                    'Selecione seu aniversário',
                     style: Theme.of(context).textTheme.headline5,
                   ),
                 ),
@@ -327,7 +327,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
                 const SizedBox(height: 20),
                 Center(
                   child: CantonPrimaryButton(
-                    buttonText: 'Confirm',
+                    buttonText: 'Confirme',
                     color: Theme.of(context).colorScheme.primary,
                     textColor: Theme.of(context).colorScheme.onBackground,
                     containerWidth: 100,
@@ -377,7 +377,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 7),
       child: CantonPrimaryButton(
-        buttonText: 'Done',
+        buttonText: 'Pronto',
         color: Theme.of(context).colorScheme.primary,
         textColor: Theme.of(context).colorScheme.onBackground,
         containerWidth: 120,

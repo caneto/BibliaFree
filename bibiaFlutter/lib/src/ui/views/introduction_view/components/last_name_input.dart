@@ -13,7 +13,7 @@ class LastNameInput extends ConsumerWidget {
       width: MediaQuery.of(context).size.width / 2 - 44,
       child: CantonTextInput(
         hintText: '',
-        labelText: 'Last Name',
+        labelText: 'Sobrenome',
         isTextFormField: true,
         obscureText: false,
         controller: lastNameController,

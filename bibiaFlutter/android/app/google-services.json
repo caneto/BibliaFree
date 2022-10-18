@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "304606692724",
-    "project_id": "blbiafree-17e64",
-    "storage_bucket": "bibliafree-17e64.appspot.com"
+    "project_number": "700960607889",
+    "project_id": "bibliafree-ec9ce",
+    "storage_bucket": "bibliafree-ec9ce.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:304606692724:android:98115527bebc398e6c5821",
+        "mobilesdk_app_id": "1:700960607889:android:6c6e521837087625777930",
         "android_client_info": {
           "package_name": "com.bibliafree.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "304606692724-pivath4gfe96e0gnh08q252c2bfjvdrg.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.bibliafree.app",
-            "certificate_hash": "55548240b49b269ef319bf7efb4894c733b7e750"
-          }
-        },
-        {
-          "client_id": "304606692724-rugv11h16k9kl81bluij3q7fhd4q3tkl.apps.googleusercontent.com",
+          "client_id": "700960607889-4urm4niev5oh6lbb1ssknvb0hf9gb00m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA0f6y5IPuI4Pw7hA_lCzy0qO0b_AVBJqU"
+          "current_key": "AIzaSyB3IMrliElM8zOt1NkdYvZECLsq7HD3TOA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "304606692724-rugv11h16k9kl81bluij3q7fhd4q3tkl.apps.googleusercontent.com",
+              "client_id": "700960607889-4urm4niev5oh6lbb1ssknvb0hf9gb00m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
