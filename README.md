@@ -13,43 +13,33 @@ Quando estava pensando no primeiro aplicativo que faria e publicaria na loja de 
 
 Para construir o aplicativo eu utilizei o [Flutter SDK](https://flutter.dev) como UI Framework e que usa [Dartlang](https://dart.dev) como linguagem de programação. A lista de pacotes que o aplicativo usa pode ser encontrada [aqui](https://github.com/caneto/BibliaFree/blob/master/pubspec.yaml) sob o recuo de dependências. Este projeto é null safe. Também usei o Firebase Analytics e o Crashlytics para entender melhor os usuários que usam o aplicativo, bem como o Firebase Auth para autenticação. Créditos para [RKeplin](https://github.com/rkeplin/bible-go-api) pela API inicial da Bíblia.
 
-## Features
+## Características
 
-- _Read 8 versions of the Bible_:
-  - _King James Version_ (KJV)
-  - _American Standard Version_ (ASV)
-  - _World English Bible_ (WEB)
-  - _Young's Literal Translation_ (YLT)
-  - _Bible In Basic English_ (BBE)
-- _Verse of the day_: Receive a daily verse of God's word.
-- _Daily Readings_: Keep up with Mass everyday with daily. readings from [USCCB](usccb.org)
-- _Sunday Mass Videos_: Always stay in tune with Sunday Mass with Sunday Mass Videos.
-- _Prayers_(SOON): Read and create prayers to take with you always.
-- _Bookmark chapters_: Never forget a chapter by saving it.
-- _Chapter Collections_(SOON): Store multiple bookmarked chapters in collections.
-- _Highlightable Text_(SOON): Highlight verses and passage for better study.
-- _Streaks_: Current Streak, Best Streak and Perfect Weeks on Elisha are stored to motivate and track progress.
-- _Daily Devotionals_: Receive daily devotionals to better study the Word.
+- _Leia 8 versões da Bíblia_:
+   - _King James Version_ (KJV)
+   - _versão padrão americana_ (ASV)
+   - _Bíblia em inglês mundial_ (WEB)
+   - _Tradução Literal de Young_ (YLT)
+   - _Bíblia em inglês básico_ (BBE)
+- _Versículo do dia_: Receba diariamente um versículo da palavra de Deus.
+- _Leituras Diárias_: Acompanhe a Missa todos os dias com diariamente. leituras de [USCCB](usccb.org)
+- _Vídeos de Missa de Domingo_: Fique sempre em sintonia com a Missa de Domingo com Vídeos de Missa de Domingo.
+- _Marcar capítulos_: Nunca esqueça um capítulo salvando-o.
+- _Streaks_: Streak atual, Best Streak e Perfect Weeks em Elisha são armazenados para motivar e acompanhar o progresso.
+- _Devocionais Diários_: Receba devocionais diários para melhor estudar a Palavra.
 
-## Getting Started
+## Começando
 
-Assuming Flutter is installed and setup on your device (If not, follow the steps to do so here), Fork, clone, or download the code for this repository and navigate to the enclosing folder inside your terminal. Then use this command to run:
+Supondo que o Flutter esteja instalado e configurado no seu dispositivo (se não estiver, siga as etapas para fazê-lo aqui), fork, clone ou baixe o código para este repositório e navegue até a pasta anexa dentro do seu terminal. Em seguida, use este comando para executar:
 
 ```
 flutter run
 ```
 
-## TestFlight & Google Play Beta
 
-If you would like to use the app via TestFlight or Google Play Beta, you can download the apps with the following links below:
+<!--## Screenshots-->
 
-TestFlight: [https://testflight.apple.com/join/7vWnoWaD](https://testflight.apple.com/join/7vWnoWaD)
-
-Google Play Beta: [https://play.google.com/store/apps/details?id=com.elisha.app](https://play.google.com/store/apps/details?id=com.elisha.app)
-
-## Screenshots
-
-<table> 
+<!--<table> 
   <tr>
     <td> 
       <img width="250" src="https://github.com/31Carlton7/elisha/blob/master/screenshots/promotional/iphone/iphone_1.png"> </img>
@@ -77,19 +67,5 @@ Google Play Beta: [https://play.google.com/store/apps/details?id=com.elisha.app]
     </td>
   </tr>
   
-</table>
+</table>-->
 
-## Featured In
-
-- [FlutterAwesome](https://flutterawesome.com/pocket-bible-church-app-built-with-flutter/)
-
-## Socials
-
-If you have any questions, you can reach me here:
-
-- Email: carltonaikins7@gmail.com
-- LinkedIn: [Carlton Aikins](https://www.linkedin.com/in/carlton-aikins-a34a14226)
-- Twitter: [@31carlton7](https://www.twitter.com/31carlton7)
-- Instagram: [@31carlton7](https://www.instagram.com/31carlton7/)
-
-In God we trust 🙏🏾
