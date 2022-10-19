@@ -1,10 +1,10 @@
 import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:bibliafree/src/ui/views/settings_view/settings_view.dart';
+import 'package:bibliafree/src/ui/views/bookmarked_chapters_view/bookmarked_chapters_view.dart';
 
-class SettingsCard extends ConsumerWidget {
-  const SettingsCard({
+class BookmarksCard extends ConsumerWidget {
+  const BookmarksCard({
     Key? key,
   }) : super(key: key);
 
@@ -12,13 +12,13 @@ class SettingsCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: () {
-        CantonMethods.viewTransition(context, const SettingsView());
+        CantonMethods.viewTransition(context, const BookmarkedChaptersView());
       },
       child: Card(
         color: CantonMethods.alternateCanvasColorType3(context),
         margin: const EdgeInsets.symmetric(horizontal: 17),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
         ),
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 21),
@@ -26,7 +26,7 @@ class SettingsCard extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Settings',
+                'Favoritos',
                 style: Theme.of(context).textTheme.headline6,
               ),
               const Icon(Iconsax.arrow_right_3),

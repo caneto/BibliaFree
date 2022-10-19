@@ -86,7 +86,7 @@ class ReaderSettingsRepository extends ChangeNotifier {
   }
 
   Future<void> _saveData() async {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
 
     final settings = <String, dynamic>{
       'bodyTextSize': _bodyTextSize,
@@ -101,7 +101,7 @@ class ReaderSettingsRepository extends ChangeNotifier {
   }
 
   void loadData() {
-    final box = Hive.box('elisha');
+    final box = Hive.box('bibliafree');
 
     /// Removes user from device.
     // box.delete('reader_settings');

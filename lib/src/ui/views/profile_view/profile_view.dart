@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:bibliafree/src/ui/components/streaks_card.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/bookmarks_card.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/favorite_verses_card.dart';
-import 'package:bibliafree/src/ui/views/profile_view/components/privacy_policy_card.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/profile_view_header.dart';
 import 'package:bibliafree/src/ui/views/profile_view/components/settings_card.dart';
 
@@ -50,11 +49,6 @@ class ProfileView extends ConsumerWidget {
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 500),
           child: const SettingsCard(),
-        ),
-        const SizedBox(height: 17),
-        ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 500),
-          child: const PrivacyPolicyCard(),
         ),
         const SizedBox(height: kDefaultPadding)
       ],

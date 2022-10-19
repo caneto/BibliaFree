@@ -1,21 +1,3 @@
-/*
-Elisha iOS & Android App
-Copyright (C) 2022 Carlton Aikins
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-
 import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
@@ -43,25 +25,25 @@ class _BottomNavBarState extends ConsumerState<BottomNavBar> {
       selectedIconTheme: IconThemeData(color: Theme.of(context).primaryColor, size: 24),
       items: const [
         BottomNavigationBarItem(
-          label: 'Home',
+          label: 'Casa',
           tooltip: '',
           activeIcon: Icon(LineAwesomeIcons.home, size: _iconSize),
           icon: Icon(LineAwesomeIcons.home, size: _iconSize),
         ),
         BottomNavigationBarItem(
-          label: 'Bible',
+          label: 'Bibla',
           tooltip: '',
           activeIcon: Icon(LineAwesomeIcons.bible, size: _iconSize),
           icon: Icon(LineAwesomeIcons.bible, size: _iconSize),
         ),
         BottomNavigationBarItem(
-          label: 'Church',
+          label: 'Templo',
           tooltip: '',
           activeIcon: Icon(LineAwesomeIcons.church, size: _iconSize),
           icon: Icon(LineAwesomeIcons.church, size: _iconSize),
         ),
         BottomNavigationBarItem(
-          label: 'Me',
+          label: 'Eu',
           tooltip: '',
           activeIcon: Icon(LineAwesomeIcons.user, size: _iconSize),
           icon: Icon(LineAwesomeIcons.user, size: _iconSize),

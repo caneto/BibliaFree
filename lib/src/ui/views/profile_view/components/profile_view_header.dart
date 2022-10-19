@@ -14,7 +14,7 @@ class ProfileViewHeader extends ConsumerWidget {
       if (source.length > 18) {
         return source.substring(0, 15) + '...';
       }
-      return 'Hi, ' + source;
+      return 'Oi, ' + source;
     }
 
     return Container(

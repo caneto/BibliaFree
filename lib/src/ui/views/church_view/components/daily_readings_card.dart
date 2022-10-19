@@ -35,12 +35,12 @@ class DailyReadingsCard extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'Daily Readings',
+                    'Leituras diárias',
                     style: Theme.of(context).textTheme.headline4,
                   ),
                   const SizedBox(height: 7),
                   Text(
-                    'SCRIPTURES FOR TODAY\'S SERVICE',
+                    'ESCRITURAS PARA O SERVIÇO DE HOJE',
                     style: Theme.of(context).textTheme.overline?.copyWith(
                           letterSpacing: 2,
                           fontWeight: FontWeight.w500,
@@ -52,7 +52,7 @@ class DailyReadingsCard extends ConsumerWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          'Join Mass today by reading the scriptures for ${dailyReading.name}.',
+                          'Junte-se à missa hoje lendo as escrituras para ${dailyReading.name}.',
                           style: Theme.of(context).textTheme.bodyText1,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
