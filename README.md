@@ -1,26 +1,17 @@
-<img src="https://github.com/31Carlton7/elisha/blob/master/assets/app_icons/banner.png"> </img>
+# caneto
 
-# Elisha
+Um aplicativo offline de Bíblia e Igreja de Bolso para estudar a Palavra de Deus e ter mais envolvimento com ela.
 
-An Offline Pocket Bible & Church App to study God's Word and have more engagement with it.
 
-<!-- Put App Store and Google Play Store Stickers Here-->
+## Sobre
 
-[Screenshots](#screenshots)
+BibliaFree é um aplicativo bíblico simples, focado no uso pessoal. Eu fiz este aplicativo na esperança de fazer com que as pessoas que não estão conectadas a Deus ou que estão, leiam/estudem a Bíblia em um formato muito simples e de uma maneira mais ou menos voltada para o público mais jovem, no entanto, este aplicativo é muito útil para multidões mais velhas também. Não importa se você lê 10 capítulos por dia ou lê apenas um versículo, isso é tudo o que é preciso para se conectar com Deus e espero que este aplicativo possa ajudar quem o usa também 🙏🏾.
 
-[TestFlight & Google Play Beta](#testflight--google-play-beta)
+Quando estava pensando no primeiro aplicativo que faria e publicaria na loja de aplicativos, pensei com cuidado. Eu acreditava que Deus me deu o conhecimento para poder programar/codificar em geral, então por que não fazer meu primeiro aplicativo, um aplicativo para honrá-lo e agradecer a ele.
 
-[License](https://github.com/31Carlton7/corona_spectator/blob/master/LICENSE)
+## Informações do desenvolvedor
 
-## About
-
-Elisha is a simple Bible app that is focused on personal use. I made this app in hopes to get people who aren't connected to God or who are, to read/study the Bible in a very simple format and manner that is more or less intended towards younger crowds, however this app is very useable for older crowds as well. No matter if you read 10 chapters a day or read just one verse, that is all it takes to connect with God and I hope this app can help anyone who uses it do too 🙏🏾.
-
-When I was thinking about the first app I would make and publish on the app store, I thought carefully. I believed that God gave me the knowledge to be able to program/code in general so why not make my first app, an app to honor him and show thanks to him.
-
-## Developer Info
-
-To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Framework and that uses [Dartlang](https://dart.dev) as the programming language. The list of packages the app uses can be found [here](https://github.com/31Carlton7/elisha/blob/master/pubspec.yaml) under the dependencies indent. My UI Package I use to curate the UI can be found [here](https://github.com/31Carlton7/canton_design_system), however I will not be publishing the package on pub.dev anytime soon. This project is null safe. I also used Firebase Analytics and Crashlytics to better understand the users who use the app, as well as Firebase Auth for authentication. Credits to [RKeplin](https://github.com/rkeplin/bible-go-api) for the initial Bible API.
+Para construir o aplicativo eu utilizei o [Flutter SDK](https://flutter.dev) como UI Framework e que usa [Dartlang](https://dart.dev) como linguagem de programação. A lista de pacotes que o aplicativo usa pode ser encontrada [aqui](https://github.com/caneto/BibliaFree/blob/master/pubspec.yaml) sob o recuo de dependências. Este projeto é null safe. Também usei o Firebase Analytics e o Crashlytics para entender melhor os usuários que usam o aplicativo, bem como o Firebase Auth para autenticação. Créditos para [RKeplin](https://github.com/rkeplin/bible-go-api) pela API inicial da Bíblia.
 
 ## Features
 
