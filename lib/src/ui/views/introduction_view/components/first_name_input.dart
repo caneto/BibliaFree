@@ -2,7 +2,7 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class FirstNameInput extends ConsumerWidget {
-  const FirstNameInput({Key? key, required this.firstNameController}) : super(key: key);
+  const FirstNameInput({Key key, this.firstNameController}) : super(key: key);
 
   final TextEditingController firstNameController;
 

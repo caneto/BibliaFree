@@ -8,7 +8,7 @@ import 'package:bibliafree/src/ui/components/verse_of_the_day_card.dart';
 import 'package:bibliafree/src/ui/views/home_view/components/home_view_header.dart';
 
 class HomeView extends ConsumerStatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({Key key}) : super(key: key);
 
   @override
   _HomeViewState createState() => _HomeViewState();

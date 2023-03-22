@@ -16,7 +16,7 @@ import 'package:bibliafree/src/ui/views/introduction_view/components/first_name_
 import 'package:bibliafree/src/ui/views/introduction_view/components/last_name_input.dart';
 
 class IntroductionView extends ConsumerStatefulWidget {
-  const IntroductionView({Key? key}) : super(key: key);
+  const IntroductionView({Key key}) : super(key: key);
 
   @override
   _IntroductionViewState createState() => _IntroductionViewState();
@@ -89,7 +89,7 @@ class _IntroductionViewState extends ConsumerState<IntroductionView> {
           ),
           child: Text(
             'Proximo',
-            style: Theme.of(context).textTheme.button?.copyWith(
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
                   color: Theme.of(context).colorScheme.onBackground,
                 ),
           ),
@@ -102,7 +102,7 @@ class _IntroductionViewState extends ConsumerState<IntroductionView> {
           ),
           child: Text(
             'Proximo',
-            style: Theme.of(context).textTheme.button?.copyWith(
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
                   color: Theme.of(context).colorScheme.onBackground,
                 ),
           ),
@@ -133,7 +133,7 @@ class _IntroductionViewState extends ConsumerState<IntroductionView> {
 }
 
 class WelcomeView extends ConsumerStatefulWidget {
-  const WelcomeView({Key? key}) : super(key: key);
+  const WelcomeView({Key key}) : super(key: key);
 
   @override
   ConsumerState<WelcomeView> createState() => _WelcomeViewState();
@@ -362,10 +362,10 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
                   onSurface: isDarkMode ? CantonColors.white : CantonColors.black,
                 ),
               ),
-              child: child!,
+              child: child,
             );
           }).then((date) {
-        _birthDateController = date!;
+        _birthDateController = date;
         setState(() {
           birthDateText = DateFormat.yMMMd().format(date);
         });

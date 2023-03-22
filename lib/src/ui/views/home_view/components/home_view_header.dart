@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:bibliafree/src/providers/local_user_repository_provider.dart';
 
 class HomeViewHeader extends ConsumerWidget {
-  const HomeViewHeader({Key? key}) : super(key: key);
+  const HomeViewHeader({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -24,12 +24,12 @@ class HomeViewHeader extends ConsumerWidget {
 
     String name(String source) {
       if (source.length > 18) {
-        return source.substring(0, 15) + '...';
+        return '${source.substring(0, 15)}...';
       }
       return source;
     }
 
-    String? dbName = ref.watch(localUserRepositoryProvider).getUser.firstName;
+    String dbName = ref.watch(localUserRepositoryProvider).getUser.firstName;
 
     return GestureDetector(
       child: Container(

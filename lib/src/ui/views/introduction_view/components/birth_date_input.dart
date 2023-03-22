@@ -3,9 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BirthDateInput extends ConsumerWidget {
   const BirthDateInput({
-    Key? key,
-    required this.birthDateText,
-    required this.showBirthDatePicker,
+    Key key,
+    this.birthDateText,
+    this.showBirthDatePicker,
   }) : super(key: key);
 
   final String birthDateText;

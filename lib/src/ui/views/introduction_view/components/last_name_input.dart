@@ -2,7 +2,7 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class LastNameInput extends ConsumerWidget {
-  const LastNameInput({Key? key, required this.lastNameController}) : super(key: key);
+  const LastNameInput({Key key, this.lastNameController}) : super(key: key);
 
   final TextEditingController lastNameController;
 
