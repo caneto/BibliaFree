@@ -2,7 +2,7 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ErrorCard extends ConsumerWidget {
-  const ErrorCard({Key? key}) : super(key: key);
+  const ErrorCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -15,7 +15,7 @@ class ErrorCard extends ConsumerWidget {
       child: Center(
         child: Text(
           'Connect to internet to access this',
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
       ),

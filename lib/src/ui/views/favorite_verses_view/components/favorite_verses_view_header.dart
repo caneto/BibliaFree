@@ -2,7 +2,7 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class FavoriteVersesViewHeader extends ConsumerWidget {
-  const FavoriteVersesViewHeader({Key? key}) : super(key: key);
+  const FavoriteVersesViewHeader({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:bibliafree/src/models/chapter.dart';
 
 class BookmarkedChapterViewHeader extends ConsumerWidget {
-  const BookmarkedChapterViewHeader({required this.chapter, required this.showBottomSheet, Key? key}) : super(key: key);
+  const BookmarkedChapterViewHeader({this.chapter, this.showBottomSheet, Key key}) : super(key: key);
 
   final void Function(Chapter) showBottomSheet;
   final Chapter chapter;
@@ -12,7 +12,7 @@ class BookmarkedChapterViewHeader extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     String name() {
-      return chapter.verses![0].book.name! + ' ' + chapter.number!;
+      return chapter.verses[0].book.name + ' ' + chapter.number;
     }
 
     return Padding(

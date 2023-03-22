@@ -14,7 +14,7 @@ import 'package:bibliafree/src/ui/components/loading_card.dart';
 import 'package:bibliafree/src/ui/views/verse_of_the_day_view/verse_of_the_day_view.dart';
 
 class VerseOfTheDayCard extends ConsumerStatefulWidget {
-  const VerseOfTheDayCard({Key? key}) : super(key: key);
+  const VerseOfTheDayCard({Key key}) : super(key: key);
 
   @override
   _VerseOfTheDayCardState createState() => _VerseOfTheDayCardState();
@@ -22,7 +22,7 @@ class VerseOfTheDayCard extends ConsumerStatefulWidget {
 
 class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
   var _isFavorite = false;
-  List<Verse>? _verses = [];
+  List<Verse> _verses = [];
 
   @override
   void initState() {
@@ -32,7 +32,7 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
 
   void _checkIfVerseIsFavorite() {
     _isFavorite = ref.read(studyToolsRepositoryProvider).favoriteVerses.where((e) {
-      return _verses!.any((element) => e.text == element.text);
+      return _verses.any((element) => e.text == element.text);
     }).isNotEmpty;
   }
 
@@ -41,9 +41,9 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
     const elementSpacing = 17.0;
     Color bgColor() {
       if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-        return CantonDarkColors.gray[800]!;
+        return CantonDarkColors.gray[800];
       }
-      return CantonColors.gray[300]!;
+      return CantonColors.gray[300];
     }
 
     final votdRepo = ref.watch(verseOfTheDayFutureProvider);
@@ -66,7 +66,7 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
 
         return GestureDetector(
           onTap: () {
-            CantonMethods.viewTransition(context, VerseOfTheDayView(verses: _verses!));
+            CantonMethods.viewTransition(context, VerseOfTheDayView(verses: _verses));
           },
           child: Container(
             padding: const EdgeInsets.all(17.0),
@@ -94,7 +94,7 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
                         ],
                       ),
                     ),
-                    _favoriteButton(context, bgColor(), _verses!),
+                    _favoriteButton(context, bgColor(), _verses),
                   ],
                 ),
               ],
@@ -134,14 +134,14 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
   Widget _favoriteButton(BuildContext context, Color bgColor, List<Verse> verses) {
     Color heartColor() {
       if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-        return CantonDarkColors.red[400]!;
+        return CantonDarkColors.red[400];
       }
-      return CantonColors.red[400]!;
+      return CantonColors.red[400];
     }
 
     Icon icon() {
       if (ref.watch(studyToolsRepositoryProvider).favoriteVerses.where((e) {
-        return _verses!.any((element) => e.id == element.id);
+        return _verses.any((element) => e.id == element.id);
       }).isNotEmpty) {
         return Icon(LineAwesomeIcons.heart_1, size: 24, color: heartColor());
       }
@@ -181,8 +181,8 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
   Widget _body(BuildContext context, Color bgColor) {
     String verseText() {
       var str = '';
-      for (Verse item in _verses!) {
-        str += item.text + ' ';
+      for (Verse item in _verses) {
+        str += '${item.text} ';
       }
       return str.substring(0, str.length);
     }
@@ -203,7 +203,7 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
               verseText(),
               overflow: TextOverflow.ellipsis,
               maxLines: 5,
-              style: Theme.of(context).textTheme.headline5?.copyWith(
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     color: _verses == null ? Theme.of(context).colorScheme.error : null,
                     fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
                     fontSize: ref.watch(readerSettingsRepositoryProvider).bodyTextSize * 1.3,
@@ -221,10 +221,10 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
     String versesString() {
       if (_verses != null) {
         var str = '';
-        if (_verses!.length > 1) {
-          str = _verses!.first.verseId.toString() + ' - ' + _verses!.last.verseId.toString();
+        if (_verses.length > 1) {
+          str = '${_verses.first.verseId} - ${_verses.last.verseId}';
         } else {
-          str = _verses![0].verseId.toString();
+          str = _verses[0].verseId.toString();
         }
 
         return str;
@@ -235,8 +235,8 @@ class _VerseOfTheDayCardState extends ConsumerState<VerseOfTheDayCard> {
     return Text(
       _verses == null
           ? 'Matthew 28:20'
-          : _verses![0].book.name! + ' ' + _verses![0].chapterId.toString() + ':' + versesString(),
-      style: Theme.of(context).textTheme.headline6?.copyWith(fontWeight: FontWeight.w500),
+          : '${_verses[0].book.name} ${_verses[0].chapterId}:${versesString()}',
+      style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.w500),
     );
   }
 }

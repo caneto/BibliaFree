@@ -12,7 +12,7 @@ import 'package:bibliafree/src/providers/study_tools_repository_provider.dart';
 import 'package:bibliafree/src/ui/components/show_favorite_verse_bottom_sheet.dart';
 
 class BibleReader extends ConsumerWidget {
-  const BibleReader({Key? key, required this.chapter}) : super(key: key);
+  const BibleReader({Key key, this.chapter}) : super(key: key);
 
   final Chapter chapter;
 
@@ -25,7 +25,7 @@ class BibleReader extends ConsumerWidget {
         margin: const EdgeInsets.symmetric(horizontal: 32),
         child: Text.rich(
           TextSpan(children: spans),
-          style: Theme.of(context).textTheme.headline5!.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall.copyWith(
                 fontWeight: FontWeight.w400,
                 fontSize: ref.watch(readerSettingsRepositoryProvider.notifier).bodyTextSize * 1.4,
                 height: ref.watch(readerSettingsRepositoryProvider.notifier).bodyTextHeight * 1.1,
@@ -34,8 +34,8 @@ class BibleReader extends ConsumerWidget {
         ),
       ),
     );
-    for (int i = 0; i < chapter.verses!.length; i++) {
-      var item = chapter.verses![i];
+    for (int i = 0; i < chapter.verses.length; i++) {
+      var item = chapter.verses[i];
       var _isFavoriteVerse =
           ref.watch(studyToolsRepositoryProvider).favoriteVerses.where((element) => element.id == item.id).isNotEmpty;
 
@@ -60,8 +60,8 @@ class BibleReader extends ConsumerWidget {
                     ),
                   Text(
                     item.verseId.toString(),
-                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                          color: Theme.of(context).colorScheme.secondaryVariant,
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: Theme.of(context).colorScheme.secondaryContainer,
                           fontSize: ref.watch(readerSettingsRepositoryProvider).verseNumberSize * 1.1,
                           // height: ref.watch(readerSettingsRepositoryProvider).verseNumberHeight,
                           fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
@@ -91,7 +91,7 @@ class BibleReader extends ConsumerWidget {
         ),
       );
 
-      if (!(i == chapter.verses!.length - 1)) {
+      if (!(i == chapter.verses.length - 1)) {
         spans.add(const TextSpan(text: ' '));
       }
     }

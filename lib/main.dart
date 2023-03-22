@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:async';
 
 import 'package:canton_ui/canton_ui.dart';
@@ -49,7 +51,9 @@ void main() async {
 }
 
 class bibliafreeApp extends ConsumerWidget {
-  const bibliafreeApp({Key? key}) : super(key: key);
+  const bibliafreeApp({Key key}) : super(key: key);
+
+  
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -64,7 +68,7 @@ class bibliafreeApp extends ConsumerWidget {
       builder: (context, child) {
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-          child: child!,
+          child: child,
         );
       },
     );

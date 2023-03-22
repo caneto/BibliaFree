@@ -78,17 +78,17 @@ class YouTubeService {
     final list = SundayMassService().getChurchYouTubeChannelIds;
 
     if (list[0] == channel.id) {
-      return [channel.videos!.where((element) => element.title.contains('The Sunday Mass')).toList()[0].id, channel];
+      return [channel.videos.where((element) => element.title.contains('The Sunday Mass')).toList()[0].id, channel];
     } else if (list[1] == channel.id) {
-      return [channel.videos![0].id, channel];
+      return [channel.videos[0].id, channel];
     } else if (list[2] == channel.id) {
       return [
-        channel.videos!.where((element) => element.title.contains('Cornerstone Church LIVE')).toList()[0].id,
+        channel.videos.where((element) => element.title.contains('Cornerstone Church LIVE')).toList()[0].id,
         channel,
       ];
     } else if (list[3] == channel.id) {
       return [
-        channel.videos!
+        channel.videos
             .where((element) => element.title.contains('Catholic Mass Today | Daily TV Mass'))
             .toList()[0]
             .id,

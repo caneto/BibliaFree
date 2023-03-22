@@ -22,7 +22,7 @@ import 'package:bibliafree/src/ui/components/error_body.dart';
 import 'package:bibliafree/src/ui/components/unexpected_error.dart';
 
 class BibleView extends ConsumerStatefulWidget {
-  const BibleView({Key? key}) : super(key: key);
+  const BibleView({Key key}) : super(key: key);
 
   @override
   _BibleViewState createState() => _BibleViewState();
@@ -38,7 +38,7 @@ class _BibleViewState extends ConsumerState<BibleView> {
     final booksRepo = ref.watch(bibleBooksProvider);
     final chaptersRepo = ref.watch(bibleChaptersProvider);
 
-    translations.sort((a, b) => a.id!.compareTo(b.id!));
+    translations.sort((a, b) => a.id.compareTo(b.id));
 
     return booksRepo.when(
       error: (e, s) {
@@ -61,11 +61,11 @@ class _BibleViewState extends ConsumerState<BibleView> {
             _isBookmarked = _isBookmarked = ref
                 .watch(studyToolsRepositoryProvider)
                 .bookmarkedChapters
-                .where((e) => e.id == chapter.id && e.verses![0].book.id == chapter.verses![0].book.id)
+                .where((e) => e.id == chapter.id && e.verses[0].book.id == chapter.verses[0].book.id)
                 .isNotEmpty;
 
             final kChapter = chapter.copyWith(verses: [
-              for (var item in chapter.verses!) item.copyWith(text: item.text.replaceAll('\\"', '"')),
+              for (var item in chapter.verses) item.copyWith(text: item.text.replaceAll('\\"', '"')),
             ]);
 
             return Responsive(
@@ -165,7 +165,7 @@ class _BibleViewState extends ConsumerState<BibleView> {
           HapticFeedback.lightImpact();
 
           setState(() {
-            _isBookmarked = !_isBookmarked;
+            _isBookmarked = _isBookmarked;
           });
 
           if (_isBookmarked) {
@@ -232,8 +232,8 @@ class _BibleViewState extends ConsumerState<BibleView> {
                 color: Theme.of(context).inputDecorationTheme.fillColor,
               ),
               child: Text(
-                translations[int.parse(translationID)].abbreviation!.toUpperCase(),
-                style: Theme.of(context).textTheme.bodyText1?.copyWith(fontWeight: FontWeight.w600),
+                translations[int.parse(translationID)].abbreviation.toUpperCase(),
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
               ),
             ),
           ),
@@ -242,7 +242,7 @@ class _BibleViewState extends ConsumerState<BibleView> {
     }
 
     Widget _chapterVerseTranslationControls(List<Translation> translations, List<Book> books, Chapter chapter) {
-      var bookChapterTitle = chapter.verses![0].book.name! + ' ' + chapter.number!;
+      var bookChapterTitle = '${chapter.verses[0].book.name} ${chapter.number}';
 
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -311,7 +311,7 @@ class _BibleViewState extends ConsumerState<BibleView> {
           HapticFeedback.lightImpact();
 
           setState(() {
-            _isBookmarked = !_isBookmarked;
+            _isBookmarked = _isBookmarked;
           });
 
           if (_isBookmarked) {
@@ -382,8 +382,8 @@ class _BibleViewState extends ConsumerState<BibleView> {
                 color: Theme.of(context).inputDecorationTheme.fillColor,
               ),
               child: Text(
-                translations[int.parse(translationID)].abbreviation!.toUpperCase(),
-                style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                translations[int.parse(translationID)].abbreviation.toUpperCase(),
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                       height: 1.3,
@@ -396,7 +396,7 @@ class _BibleViewState extends ConsumerState<BibleView> {
     }
 
     Widget _chapterVerseTranslationControls(List<Translation> translations, List<Book> books, Chapter chapter) {
-      var bookChapterTitle = chapter.verses![0].book.name! + ' ' + chapter.number!;
+      var bookChapterTitle = '${chapter.verses[0].book.name} ${chapter.number}';
 
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -650,18 +650,18 @@ class _BibleViewState extends ConsumerState<BibleView> {
         return GestureDetector(
           onTap: () async {
             HapticFeedback.lightImpact();
-            await ref.read(bibleRepositoryProvider).changeChapter(ref, book.id!, chapter.id!);
+            await ref.read(bibleRepositoryProvider).changeChapter(ref, book.id, chapter.id);
             Navigator.of(context, rootNavigator: true).pop();
           },
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Theme.of(context).colorScheme.secondaryVariant, width: 0.7),
+              border: Border.all(color: Theme.of(context).colorScheme.secondaryContainer, width: 0.7),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Center(
               child: Text(
                 chapter.id.toString(),
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           ),
@@ -670,7 +670,7 @@ class _BibleViewState extends ConsumerState<BibleView> {
 
       return CantonExpansionTile(
         childrenPadding: const EdgeInsets.symmetric(horizontal: 24),
-        title: Text(book.name!, style: Theme.of(context).textTheme.headline6),
+        title: Text(book.name, style: Theme.of(context).textTheme.titleLarge),
         iconColor: Theme.of(context).colorScheme.primary,
         children: [
           Container(
@@ -684,8 +684,8 @@ class _BibleViewState extends ConsumerState<BibleView> {
                 mainAxisSpacing: 10.0,
                 crossAxisSpacing: 10.0,
               ),
-              itemCount: book.chapters!.length,
-              itemBuilder: (context, index) => _chapterCard(book.chapters![index]),
+              itemCount: book.chapters.length,
+              itemBuilder: (context, index) => _chapterCard(book.chapters[index]),
             ),
           ),
         ],
@@ -802,7 +802,7 @@ class _BibleViewState extends ConsumerState<BibleView> {
                         onTap: () async {
                           await ref.read(localRepositoryProvider.notifier).changeBibleTranslation(
                                 index,
-                                translation.abbreviation!.toLowerCase(),
+                                translation.abbreviation.toLowerCase(),
                               );
 
                           ref.refresh(bibleChaptersProvider);
@@ -813,13 +813,13 @@ class _BibleViewState extends ConsumerState<BibleView> {
                         child: ListTile(
                           contentPadding: const EdgeInsets.symmetric(vertical: 3, horizontal: 24),
                           title: Text(
-                            translation.name!,
+                            translation.name,
                             style: Theme.of(context).textTheme.headline6?.copyWith(
                                   fontSize: Responsive.isTablet(context) ? 21 : null,
                                 ),
                           ),
                           trailing: Text(
-                            translation.abbreviation!.toUpperCase(),
+                            translation.abbreviation.toUpperCase(),
                             style: Theme.of(context).textTheme.bodyText1?.copyWith(
                                   color: Theme.of(context).colorScheme.secondaryVariant,
                                   fontSize: Responsive.isTablet(context) ? 18 : null,

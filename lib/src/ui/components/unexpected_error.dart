@@ -2,7 +2,7 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class UnexpectedError extends ConsumerWidget {
-  const UnexpectedError(this.provider, {Key? key}) : super(key: key);
+  const UnexpectedError(this.provider, {Key key}) : super(key: key);
 
   final AutoDisposeFutureProvider provider;
 
@@ -15,7 +15,7 @@ class UnexpectedError extends ConsumerWidget {
           Text(
             'Oops, something unexpected happened :(',
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
           const SizedBox(height: 20),
           CantonPrimaryButton(

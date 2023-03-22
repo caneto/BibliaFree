@@ -6,7 +6,7 @@ import 'package:bibliafree/src/ui/views/church_view/components/church_view_heade
 import 'package:bibliafree/src/ui/views/church_view/components/daily_readings_card.dart';
 
 class ChurchView extends ConsumerStatefulWidget {
-  const ChurchView({Key? key}) : super(key: key);
+  const ChurchView({Key key}) : super(key: key);
 
   @override
   _ChurchViewState createState() => _ChurchViewState();

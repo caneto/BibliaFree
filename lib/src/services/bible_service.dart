@@ -18,7 +18,7 @@ class BibleService {
 
   final jsonText = rootBundle.loadString('backend/$translationAbb.json');
 
-  Future<List<Book>> getBooks(String? bookID) async {
+  Future<List<Book>> getBooks(String bookID) async {
     try {
       if (!['', null].contains(bookID)) {
         final text = await rootBundle.loadString('backend/$translationAbb.json');
@@ -27,16 +27,16 @@ class BibleService {
 
         final bibleText = map['resultset']['row'] as List<dynamic>;
 
-        final bookText = bibleText.where((element) => element['field']![1].toString() == bookID).toList();
+        final bookText = bibleText.where((element) => element['field'][1].toString() == bookID).toList();
 
         final chapters = {
-          for (var item in bookText) ChapterId(id: item['field']![2]),
+          for (var item in bookText) ChapterId(id: item['field'][2]),
         }.toList();
 
         final book = Book(
-          id: bookText[0]['field']![1],
-          name: BibleRepository().mapOfBibleBooks[int.parse(bookID!)],
-          testament: bookText[0]['field']![1] >= 40 ? 'New' : 'Old',
+          id: bookText[0]['field'][1],
+          name: BibleRepository().mapOfBibleBooks[int.parse(bookID)],
+          testament: bookText[0]['field'][1] >= 40 ? 'New' : 'Old',
           chapters: chapters,
         );
 
@@ -62,9 +62,9 @@ class BibleService {
 
       final bibleText = map['resultset']['row'] as List<dynamic>;
 
-      final bookText = bibleText.where((element) => element['field']![1].toString() == bookID).toList();
+      final bookText = bibleText.where((element) => element['field'][1].toString() == bookID).toList();
 
-      final chapterText = bookText.where((element) => element['field']![2].toString() == chapterID).toList();
+      final chapterText = bookText.where((element) => element['field'][2].toString() == chapterID).toList();
 
       final verses = {
         for (var item in chapterText) Verse.fromList(item['field']).copyWith(book: books[0]),
@@ -85,7 +85,7 @@ class BibleService {
     }
   }
 
-  Future<List<Chapter>> getChapters(String? bookID) async {
+  Future<List<Chapter>> getChapters(String bookID) async {
     try {
       final text = await rootBundle.loadString('backend/$translationAbb.json');
 
@@ -93,7 +93,7 @@ class BibleService {
 
       final bibleText = map['resultset']['row'] as List<dynamic>;
 
-      final bookText = bibleText.where((element) => element['field']![1].toString() == bookID).toList();
+      final bookText = bibleText.where((element) => element['field'][1].toString() == bookID).toList();
 
       final verses = {
         for (var item in bookText) Verse.fromList(item['field']),
@@ -102,10 +102,10 @@ class BibleService {
       final chapters = [
         for (var item in bookText)
           Chapter(
-            id: bookText[0]['field']![2],
-            number: bookText[0]['field']![2].toString(),
+            id: bookText[0]['field'][2],
+            number: bookText[0]['field'][2].toString(),
             translation: translationID,
-            verses: verses.where((element) => element.chapterId == item['field']![2]).toList(),
+            verses: verses.where((element) => element.chapterId == item['field'][2]).toList(),
             bookmarked: false,
           )
       ];
@@ -117,7 +117,7 @@ class BibleService {
     }
   }
 
-  Future<List<Verse>> getVerses(String bookID, String chapterID, String? verseID) async {
+  Future<List<Verse>> getVerses(String bookID, String chapterID, String verseID) async {
     try {
       final text = await rootBundle.loadString('backend/$translationAbb.json');
 
@@ -132,27 +132,27 @@ class BibleService {
 
         switch (chapterID.length) {
           case 1:
-            vId += '00' + chapterID;
+            vId += '00$chapterID';
             break;
           case 2:
-            vId += '0' + chapterID;
+            vId += '0$chapterID';
             break;
           default:
             vId += chapterID;
         }
-        switch (verseID!.length) {
+        switch (verseID.length) {
           case 1:
-            vId += '00' + verseID;
+            vId += '00$verseID';
             break;
           case 2:
-            vId += '0' + verseID;
+            vId += '0$verseID';
             break;
           default:
             vId += verseID;
         }
 
         final verseElement =
-            bibleText.where((element) => element['field']![0].toString() == vId).toList()[0]['field'] as List<dynamic>;
+            bibleText.where((element) => element['field'][0].toString() == vId).toList()[0]['field'] as List<dynamic>;
 
         verseElement[1] = books;
 
@@ -160,9 +160,9 @@ class BibleService {
 
         return verses;
       } else {
-        final bookText = bibleText.where((element) => element['field']![1].toString() == bookID).toList();
+        final bookText = bibleText.where((element) => element['field'][1].toString() == bookID).toList();
 
-        final chapterText = bookText.where((element) => element['field']![2].toString() == chapterID);
+        final chapterText = bookText.where((element) => element['field'][2].toString() == chapterID);
 
         final books = await getBooks(bookID);
 

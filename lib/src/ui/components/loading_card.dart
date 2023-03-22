@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shimmer/shimmer.dart';
 
 class LoadingCard extends ConsumerWidget {
-  const LoadingCard({Key? key}) : super(key: key);
+  const LoadingCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

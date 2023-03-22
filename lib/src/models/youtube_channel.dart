@@ -7,15 +7,15 @@ class YouTubeChannel {
   final String subscriberCount;
   final String videoCount;
   final String uploadPlaylistId;
-  List<YouTubeVideo>? videos;
+  List<YouTubeVideo> videos;
 
   YouTubeChannel({
-    required this.id,
-    required this.title,
-    required this.profilePictureUrl,
-    required this.subscriberCount,
-    required this.videoCount,
-    required this.uploadPlaylistId,
+    this.id,
+    this.title,
+    this.profilePictureUrl,
+    this.subscriberCount,
+    this.videoCount,
+    this.uploadPlaylistId,
     this.videos,
   });
 

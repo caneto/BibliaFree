@@ -8,7 +8,7 @@ import 'package:bibliafree/src/models/verse.dart';
 import 'package:bibliafree/src/providers/study_tools_repository_provider.dart';
 
 class FavoriteVerseCard extends ConsumerStatefulWidget {
-  const FavoriteVerseCard({Key? key, required this.verse}) : super(key: key);
+  const FavoriteVerseCard({Key key, this.verse}) : super(key: key);
 
   final Verse verse;
 
@@ -19,7 +19,7 @@ class FavoriteVerseCard extends ConsumerStatefulWidget {
 class _FavoriteVerseCardState extends ConsumerState<FavoriteVerseCard> {
   String cardTitle() {
     final str =
-        widget.verse.book.name! + ' ' + widget.verse.chapterId.toString() + ':' + widget.verse.verseId.toString();
+        '${widget.verse.book.name} ${widget.verse.chapterId}:${widget.verse.verseId}';
 
     return str;
   }
@@ -28,16 +28,16 @@ class _FavoriteVerseCardState extends ConsumerState<FavoriteVerseCard> {
     var _isFavorite = verse.favorite;
     Color bgColor() {
       if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-        return CantonDarkColors.gray[800]!;
+        return CantonDarkColors.gray[800];
       }
-      return CantonColors.gray[300]!;
+      return CantonColors.gray[300];
     }
 
     Color heartColor() {
       if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-        return CantonDarkColors.red[400]!;
+        return CantonDarkColors.red[400];
       }
-      return CantonColors.red[400]!;
+      return CantonColors.red[400];
     }
 
     Icon icon() {
@@ -52,7 +52,7 @@ class _FavoriteVerseCardState extends ConsumerState<FavoriteVerseCard> {
         HapticFeedback.mediumImpact();
 
         setState(() {
-          _isFavorite = !_isFavorite;
+          _isFavorite = _isFavorite;
         });
 
         if (_isFavorite) {

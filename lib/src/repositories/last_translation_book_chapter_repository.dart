@@ -66,7 +66,7 @@ class LastTranslationBookChapterRepository extends StateNotifier<TranslationBook
     state.chapter = int.parse(savedList[3]);
 
     translationID = state.translation.toString();
-    translationAbb = state.translationAbb!;
+    translationAbb = state.translationAbb;
     bookID = state.book.toString();
     chapterID = state.chapter.toString();
   }

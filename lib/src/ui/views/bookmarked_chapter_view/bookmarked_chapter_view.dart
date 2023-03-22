@@ -7,7 +7,7 @@ import 'package:bibliafree/src/ui/components/bible_reader.dart';
 import 'package:bibliafree/src/ui/views/bookmarked_chapter_view/components/bookmarked_chapter_view_header.dart';
 
 class BookmarkedChapterView extends ConsumerStatefulWidget {
-  const BookmarkedChapterView(this.chapter, {Key? key}) : super(key: key);
+  const BookmarkedChapterView(this.chapter, {Key key}) : super(key: key);
 
   final Chapter chapter;
 

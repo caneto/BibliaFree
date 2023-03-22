@@ -5,7 +5,7 @@ class ErrorBody extends ConsumerWidget {
   final String message;
   final AutoDisposeFutureProvider provider;
 
-  const ErrorBody(this.message, this.provider, {Key? key}) : super(key: key);
+  const ErrorBody(this.message, this.provider, {Key key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Column(
@@ -15,7 +15,7 @@ class ErrorBody extends ConsumerWidget {
         Center(
           child: Text(
             message,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.headlineLarge,
           ),
         ),
         const SizedBox(height: 12),

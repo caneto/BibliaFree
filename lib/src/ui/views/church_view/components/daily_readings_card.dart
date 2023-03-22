@@ -8,7 +8,7 @@ import 'package:bibliafree/src/ui/views/daily_readings_view/daily_readings_view.
 
 class DailyReadingsCard extends ConsumerWidget {
   const DailyReadingsCard({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

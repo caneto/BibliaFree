@@ -5,7 +5,7 @@ import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:bibliafree/src/providers/streaks_repository_provider.dart';
 
 class StreaksCard extends ConsumerWidget {
-  const StreaksCard({Key? key, required this.marginalPadding}) : super(key: key);
+  const StreaksCard({Key key, this.marginalPadding}) : super(key: key);
 
   final bool marginalPadding;
 

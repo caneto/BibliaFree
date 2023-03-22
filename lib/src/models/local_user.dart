@@ -1,39 +1,21 @@
-/*
-Elisha iOS & Android App
-Copyright (C) 2022 Carlton Aikins
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-
 import 'dart:convert';
 
 class LocalUser {
   String firstName;
   String lastName;
-  DateTime? birthDate;
+  DateTime birthDate;
 
   LocalUser({
-    required this.firstName,
-    required this.lastName,
+    this.firstName,
+    this.lastName,
     this.birthDate,
   });
 
   LocalUser copyWith({
-    String? firstName,
-    String? lastName,
-    String? email,
-    DateTime? birthDate,
+    String firstName,
+    String lastName,
+    String email,
+    DateTime birthDate,
   }) {
     return LocalUser(
       firstName: firstName ?? this.firstName,
@@ -46,7 +28,7 @@ class LocalUser {
     return {
       'firstName': firstName,
       'lastName': lastName,
-      'birthDate': birthDate!.millisecondsSinceEpoch,
+      'birthDate': birthDate.millisecondsSinceEpoch,
     };
   }
 

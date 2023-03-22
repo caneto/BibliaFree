@@ -180,7 +180,7 @@ class BibleRepository {
         return 'New';
       }
 
-      final chapters = List<ChapterId>.generate(newMap[item.key]!, (i) => ChapterId(id: i + 1));
+      final chapters = List<ChapterId>.generate(newMap[item.key], (i) => ChapterId(id: i + 1));
 
       final book = Book(id: item.key, chapters: chapters, name: item.value, testament: testament());
 
@@ -292,11 +292,11 @@ class BibleRepository {
     if (isBackward) {
       if (!isGenesisOne()) {
         if (isFirstChapterInBook()) {
-          newBibleBook = ref.watch(localRepositoryProvider).book! - 1;
-          newBibleChapter = _mapOfBibleChaptersAndBooks[newBibleBook]!;
+          newBibleBook = ref.watch(localRepositoryProvider).book - 1;
+          newBibleChapter = _mapOfBibleChaptersAndBooks[newBibleBook];
         } else {
-          newBibleBook = ref.watch(localRepositoryProvider).book!;
-          newBibleChapter = ref.watch(localRepositoryProvider).chapter! - 1;
+          newBibleBook = ref.watch(localRepositoryProvider).book;
+          newBibleChapter = ref.watch(localRepositoryProvider).chapter - 1;
         }
 
         bookID = newBibleBook.toString();
@@ -312,11 +312,11 @@ class BibleRepository {
     } else {
       if (!isRevelationTwentyTwo()) {
         if (_isLastChapterInBook(ref)) {
-          newBibleBook = ref.watch(localRepositoryProvider).book! + 1;
+          newBibleBook = ref.watch(localRepositoryProvider).book + 1;
           newBibleChapter = 1;
         } else {
-          newBibleBook = ref.watch(localRepositoryProvider).book!;
-          newBibleChapter = ref.watch(localRepositoryProvider).chapter! + 1;
+          newBibleBook = ref.watch(localRepositoryProvider).book;
+          newBibleChapter = ref.watch(localRepositoryProvider).chapter + 1;
         }
 
         bookID = newBibleBook.toString();
@@ -333,10 +333,10 @@ class BibleRepository {
   }
 
   Future<void> changeChapter(WidgetRef ref, int book, int chapter) async {
-    if (ref.watch(localRepositoryProvider).book! == book && ref.watch(localRepositoryProvider).chapter! == chapter) {
+    if (ref.watch(localRepositoryProvider).book == book && ref.watch(localRepositoryProvider).chapter == chapter) {
       DoNothingAction();
     } else {
-      if (ref.watch(localRepositoryProvider).book! == book) {
+      if (ref.watch(localRepositoryProvider).book == book) {
         chapterID = chapter.toString();
         await ref.read(localRepositoryProvider.notifier).changeBibleChapter(chapter);
       } else {

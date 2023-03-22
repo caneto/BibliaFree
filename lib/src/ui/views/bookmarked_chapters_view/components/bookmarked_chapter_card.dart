@@ -6,10 +6,10 @@ import 'package:bibliafree/src/ui/views/bookmarked_chapter_view/bookmarked_chapt
 
 class BookmarkedChapterCard extends ConsumerWidget {
   const BookmarkedChapterCard({
-    Key? key,
-    required this.chapter,
-    required this.setState,
-    required this.showBookmarkedChapterOptionsBottomSheet,
+    Key key,
+    this.chapter,
+    this.setState,
+    this.showBookmarkedChapterOptionsBottomSheet,
   }) : super(key: key);
 
   final Chapter chapter;
@@ -19,7 +19,7 @@ class BookmarkedChapterCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     String cardTitle() {
-      return chapter.verses![0].book.name! + ' ' + chapter.number!.toString();
+      return chapter.verses[0].book.name + ' ' + chapter.number.toString();
     }
 
     return GestureDetector(

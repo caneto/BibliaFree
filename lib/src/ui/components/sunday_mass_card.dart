@@ -5,7 +5,7 @@ import 'package:bibliafree/src/providers/local_user_repository_provider.dart';
 import 'package:bibliafree/src/ui/views/sunday_mass_view/sunday_mass_view.dart';
 
 class SundayMassCard extends ConsumerWidget {
-  const SundayMassCard({Key? key}) : super(key: key);
+  const SundayMassCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -28,7 +28,7 @@ class SundayMassCard extends ConsumerWidget {
               const SizedBox(height: 15),
               Text(
                 'Sunday Mass',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 7),
               Text(

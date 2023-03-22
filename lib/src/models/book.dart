@@ -5,10 +5,10 @@ import 'package:flutter/foundation.dart';
 import 'package:bibliafree/src/models/chapter.dart';
 
 class Book {
-  int? id;
-  String? name;
-  String? testament;
-  List<ChapterId>? chapters;
+  int id;
+  String name;
+  String testament;
+  List<ChapterId> chapters;
 
   Book({
     this.id,
@@ -18,10 +18,10 @@ class Book {
   });
 
   Book copyWith({
-    int? id,
-    String? name,
-    String? testament,
-    List<ChapterId>? chapters,
+    int id,
+    String name,
+    String testament,
+    List<ChapterId> chapters,
   }) {
     return Book(
       id: id ?? this.id,

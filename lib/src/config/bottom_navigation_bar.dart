@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
@@ -6,7 +8,8 @@ class BottomNavBar extends ConsumerStatefulWidget {
   final int currentIndex;
   final void Function(int) onTabTapped;
 
-  const BottomNavBar(this.currentIndex, this.onTabTapped, {Key? key}) : super(key: key);
+  const BottomNavBar(this.currentIndex, this.onTabTapped, {Key key}) : super(key: key);
+  
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
 }
@@ -21,7 +24,7 @@ class _BottomNavBarState extends ConsumerState<BottomNavBar> {
       onTap: widget.onTabTapped,
       backgroundColor: Theme.of(context).colorScheme.secondary,
       selectedItemColor: Theme.of(context).colorScheme.primary,
-      unselectedItemColor: Theme.of(context).colorScheme.secondaryVariant,
+      unselectedItemColor: Theme.of(context).colorScheme.secondaryContainer,
       selectedIconTheme: IconThemeData(color: Theme.of(context).primaryColor, size: 24),
       items: const [
         BottomNavigationBarItem(

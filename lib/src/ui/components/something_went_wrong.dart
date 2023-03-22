@@ -2,7 +2,7 @@ import 'package:canton_ui/canton_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SomethingWentWrong extends ConsumerWidget {
-  const SomethingWentWrong({Key? key}) : super(key: key);
+  const SomethingWentWrong({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -12,8 +12,8 @@ class SomethingWentWrong extends ConsumerWidget {
         children: [
           Text(
             'Something went wrong',
-            style: Theme.of(context).textTheme.headline5!.copyWith(
-                  color: Theme.of(context).colorScheme.secondaryVariant,
+            style: Theme.of(context).textTheme.headlineSmall.copyWith(
+                  color: Theme.of(context).colorScheme.secondaryContainer,
                 ),
           ),
           const SizedBox(height: 20),

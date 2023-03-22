@@ -5,10 +5,10 @@ import 'package:flutter/foundation.dart';
 import 'package:bibliafree/src/models/verse.dart';
 
 class Chapter {
-  int? id;
-  String? number;
-  String? translation;
-  List<Verse>? verses;
+  int id;
+  String number;
+  String translation;
+  List<Verse> verses;
   bool bookmarked;
 
   Chapter({
@@ -16,15 +16,15 @@ class Chapter {
     this.number,
     this.translation,
     this.verses,
-    required this.bookmarked,
+    this.bookmarked,
   });
 
   Chapter copyWith({
-    int? id,
-    String? number,
-    String? translation,
-    List<Verse>? verses,
-    bool? bookmarked,
+    int id,
+    String number,
+    String translation,
+    List<Verse> verses,
+    bool bookmarked,
   }) {
     return Chapter(
       id: id ?? this.id,
@@ -44,7 +44,7 @@ class Chapter {
       'id': id,
       'number': number,
       'translation': translation,
-      'verses': verses?.map((x) => x.toMap()).toList(),
+      'verses': verses?.map((x) => x.toMap())?.toList(),
       'bookmarked': bookmarked,
     };
   }
@@ -83,11 +83,11 @@ class Chapter {
 }
 
 class ChapterId {
-  int? id;
+  int id;
   ChapterId({this.id});
 
   ChapterId copyWith({
-    int? id,
+    int id,
   }) {
     return ChapterId(
       id: id ?? this.id,

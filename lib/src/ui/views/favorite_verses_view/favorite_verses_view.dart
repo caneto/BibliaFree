@@ -6,7 +6,7 @@ import 'package:bibliafree/src/ui/views/favorite_verses_view/components/favorite
 import 'package:bibliafree/src/ui/views/favorite_verses_view/components/favorite_verses_view_header.dart';
 
 class FavoriteVersesView extends ConsumerStatefulWidget {
-  const FavoriteVersesView({Key? key}) : super(key: key);
+  const FavoriteVersesView({Key key}) : super(key: key);
 
   @override
   ConsumerState<FavoriteVersesView> createState() => _FavoriteVersesViewState();
@@ -55,8 +55,8 @@ class _FavoriteVersesViewState extends ConsumerState<FavoriteVersesView> {
           : Center(
               child: Text(
                 'No Favorite Verses',
-                style: Theme.of(context).textTheme.headline5?.copyWith(
-                      color: Theme.of(context).colorScheme.secondaryVariant,
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: Theme.of(context).colorScheme.secondaryContainer,
                     ),
               ),
             ),

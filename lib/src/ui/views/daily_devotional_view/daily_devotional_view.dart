@@ -8,7 +8,7 @@ import 'package:bibliafree/src/providers/reader_settings_repository_provider.dar
 import 'package:bibliafree/src/ui/views/daily_devotional_view/components/daily_devotional_view_header.dart';
 
 class DailyDevotionalView extends ConsumerWidget {
-  const DailyDevotionalView({Key? key, required this.htmlData}) : super(key: key);
+  const DailyDevotionalView({Key key, this.htmlData}) : super(key: key);
 
   final String htmlData;
 

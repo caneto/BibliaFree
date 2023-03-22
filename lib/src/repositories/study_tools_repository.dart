@@ -39,7 +39,7 @@ class StudyToolsRepository extends ChangeNotifier {
   Future<void> removeBookmarkChapter(Chapter chapter) async {
     _bookmarkedChapters = [
       for (final item in _bookmarkedChapters)
-        if (item.verses![0].text != chapter.verses![0].text) item,
+        if (item.verses[0].text != chapter.verses[0].text) item,
     ];
 
     await _saveData();

@@ -12,25 +12,25 @@ class Verse {
   bool favorite;
 
   Verse({
-    required this.id,
-    required this.chapterId,
-    required this.verseId,
-    required this.text,
-    required this.book,
-    required this.favorite,
+    this.id,
+    this.chapterId,
+    this.verseId,
+    this.text,
+    this.book,
+    this.favorite,
   });
 
-  String get bookChapterVerse => book.name! + ' ' + chapterId.toString() + ':' + verseId.toString();
+  String get bookChapterVerse => '${book.name} $chapterId:$verseId';
 
   bool get isFavorite => StudyToolsRepository().favoriteVerses.where((element) => element.id == id).isNotEmpty;
 
   Verse copyWith({
-    int? id,
-    int? chapterId,
-    int? verseId,
-    String? text,
-    Book? book,
-    bool? favorite,
+    int id,
+    int chapterId,
+    int verseId,
+    String text,
+    Book book,
+    bool favorite,
   }) {
     return Verse(
       id: id ?? this.id,

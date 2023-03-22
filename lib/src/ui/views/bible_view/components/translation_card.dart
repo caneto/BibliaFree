@@ -6,11 +6,11 @@ import 'package:bibliafree/src/providers/last_translation_book_chapter_provider.
 
 class TranslationCard extends ConsumerWidget {
   const TranslationCard({
-    Key? key,
-    required this.setState,
-    required this.index,
-    required this.ref,
-    required this.translation,
+    Key key,
+    this.setState,
+    this.index,
+    this.ref,
+    this.translation,
   }) : super(key: key);
 
   final void Function(void Function()) setState;
@@ -24,7 +24,7 @@ class TranslationCard extends ConsumerWidget {
       onTap: () async {
         await ref.read(localRepositoryProvider.notifier).changeBibleTranslation(
               index - 1,
-              translation.abbreviation!.toLowerCase(),
+              translation.abbreviation.toLowerCase(),
             );
 
         // ref.refresh(bibleChaptersProvider);
@@ -37,15 +37,15 @@ class TranslationCard extends ConsumerWidget {
       child: ListTile(
         contentPadding: const EdgeInsets.symmetric(vertical: 3, horizontal: 17),
         title: Text(
-          translation.name!,
-          style: Theme.of(context).textTheme.headline6?.copyWith(
+          translation.name,
+          style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                 fontSize: Responsive.isTablet(context) ? 21 : null,
               ),
         ),
         trailing: Text(
-          translation.abbreviation!.toUpperCase(),
-          style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                color: Theme.of(context).colorScheme.secondaryVariant,
+          translation.abbreviation.toUpperCase(),
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                color: Theme.of(context).colorScheme.secondaryContainer,
                 fontSize: Responsive.isTablet(context) ? 18 : null,
               ),
         ),

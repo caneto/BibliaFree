@@ -5,10 +5,10 @@ import 'package:flutter/foundation.dart';
 import 'package:bibliafree/src/models/reading.dart';
 
 class DailyReading {
-  String? name;
-  String? lectionary;
-  DateTime? date;
-  List<Reading>? readings;
+  String name;
+  String lectionary;
+  DateTime date;
+  List<Reading> readings;
 
   DailyReading({
     this.name,
@@ -18,10 +18,10 @@ class DailyReading {
   });
 
   DailyReading copyWith({
-    String? name,
-    String? lectionary,
-    DateTime? date,
-    List<Reading>? readings,
+    String name,
+    String lectionary,
+    DateTime date,
+    List<Reading> readings,
   }) {
     return DailyReading(
       name: name ?? this.name,
@@ -36,7 +36,7 @@ class DailyReading {
       'name': name,
       'lectionary': lectionary,
       'date': date?.millisecondsSinceEpoch,
-      'readings': readings?.map((x) => x.toMap()).toList(),
+      'readings': readings?.map((x) => x.toMap())?.toList(),
     };
   }
 

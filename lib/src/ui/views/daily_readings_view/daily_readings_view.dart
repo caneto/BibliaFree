@@ -9,7 +9,7 @@ import 'package:bibliafree/src/providers/reader_settings_repository_provider.dar
 import 'package:bibliafree/src/ui/views/daily_readings_view/components/daily_readings_view_header.dart';
 
 class DailyReadingsView extends ConsumerWidget {
-  const DailyReadingsView(this.dailyReading, {Key? key}) : super(key: key);
+  const DailyReadingsView(this.dailyReading, {Key key}) : super(key: key);
 
   final DailyReading dailyReading;
 
@@ -50,14 +50,14 @@ class DailyReadingsView extends ConsumerWidget {
   List<Widget> _body(BuildContext context, WidgetRef ref) {
     List<Widget> children = [
       Text(
-        dailyReading.name!,
+        dailyReading.name,
         style: Theme.of(context).textTheme.headline3?.copyWith(
               fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
             ),
       ),
       const SizedBox(height: 5),
       Text(
-        'Lectionary: ' + dailyReading.lectionary!,
+        'Lectionary: ' + dailyReading.lectionary,
         style: Theme.of(context).textTheme.headline6?.copyWith(
               color: Theme.of(context).colorScheme.secondaryVariant,
               fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
@@ -66,11 +66,11 @@ class DailyReadingsView extends ConsumerWidget {
       const SizedBox(height: 30),
     ];
 
-    for (int i = 0; i < dailyReading.readings!.length; i++) {
+    for (int i = 0; i < dailyReading.readings.length; i++) {
       children.add(
-        _readingCard(context, dailyReading.readings![i], ref),
+        _readingCard(context, dailyReading.readings[i], ref),
       );
-      if (i != dailyReading.readings!.length - 1) {
+      if (i == (dailyReading.readings.length - 1)) {
         children.add(const SizedBox(height: 30));
       }
     }
@@ -111,7 +111,7 @@ class DailyReadingsView extends ConsumerWidget {
         Row(
           children: [
             Text(
-              reading.name!,
+              reading.name,
               style: Theme.of(context).textTheme.headline4?.copyWith(
                     fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
                   ),
@@ -119,7 +119,7 @@ class DailyReadingsView extends ConsumerWidget {
             const SizedBox(width: 10),
             Expanded(
               child: Text(
-                reading.snippetAddress!,
+                reading.snippetAddress,
                 style: Theme.of(context).textTheme.headline6?.copyWith(
                       color: Theme.of(context).colorScheme.secondaryVariant,
                       fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
@@ -130,7 +130,7 @@ class DailyReadingsView extends ConsumerWidget {
         ),
         const Divider(height: 20),
         Text(
-          reading.text!,
+          reading.text,
           style: Theme.of(context).textTheme.headline5?.copyWith(
                 fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
                 fontWeight: FontWeight.w400,

@@ -7,7 +7,7 @@ import 'package:bibliafree/src/ui/views/bookmarked_chapters_view/components/book
 import 'package:bibliafree/src/ui/views/bookmarked_chapters_view/components/bookmarked_chapters_view_header.dart';
 
 class BookmarkedChaptersView extends ConsumerStatefulWidget {
-  const BookmarkedChaptersView({Key? key}) : super(key: key);
+  const BookmarkedChaptersView({Key key}) : super(key: key);
 
   @override
   _BookmarkedChaptersViewState createState() => _BookmarkedChaptersViewState();

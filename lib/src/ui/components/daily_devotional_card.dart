@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:bibliafree/src/providers/daily_devotional_service_provider.dart';
 
 class DailyDevotionalCard extends ConsumerStatefulWidget {
-  const DailyDevotionalCard({Key? key}) : super(key: key);
+  const DailyDevotionalCard({Key key}) : super(key: key);
 
   @override
   ConsumerState<DailyDevotionalCard> createState() => _DailyDevotionalCardState();
@@ -27,9 +27,9 @@ class _DailyDevotionalCardState extends ConsumerState<DailyDevotionalCard> {
 
     Color bgColor() {
       if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-        return CantonDarkColors.gray[800]!;
+        return CantonDarkColors.gray[800];
       }
-      return CantonColors.gray[300]!;
+      return CantonColors.gray[300];
     }
 
     // final devotionalRepo = ref.watch(dailyDevotionalTodayProvider);
@@ -79,7 +79,7 @@ class _DailyDevotionalCardState extends ConsumerState<DailyDevotionalCard> {
                   width: 75,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [CantonColors.purple[500]!, CantonColors.purple[600]!],
+                      colors: [CantonColors.purple[500], CantonColors.purple[600]],
                       begin: Alignment.topRight,
                       end: Alignment.bottomRight,
                     ),
@@ -112,7 +112,7 @@ class _DailyDevotionalCardState extends ConsumerState<DailyDevotionalCard> {
   Widget _header(BuildContext context, Color bgColor) {
     return Text(
       'Daily Devotional',
-      style: Theme.of(context).textTheme.headline4?.copyWith(fontWeight: FontWeight.bold),
+      style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
     );
   }
 
@@ -129,7 +129,7 @@ class _DailyDevotionalCardState extends ConsumerState<DailyDevotionalCard> {
                 'Learn and Meditate on God\'s Word daily',
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
-                style: Theme.of(context).textTheme.headline5?.copyWith(
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       fontWeight: FontWeight.w500,
                     ),
               ),
