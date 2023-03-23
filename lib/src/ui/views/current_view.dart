@@ -18,7 +18,7 @@ final _churchNavigatorKey = GlobalKey<NavigatorState>();
 final _profileNavigatorKey = GlobalKey<NavigatorState>();
 
 class CurrentView extends ConsumerStatefulWidget {
-  const CurrentView({Key? key}) : super(key: key);
+  const CurrentView({Key key}) : super(key: key);
 
   @override
   _CurrentViewState createState() => _CurrentViewState();
@@ -34,17 +34,17 @@ class _CurrentViewState extends ConsumerState<CurrentView> {
   }
 
   void _onTabTapped(int index) {
-    if (index == _currentIndex && _currentIndex == 0 && _homeNavigatorKey.currentState!.canPop()) {
-      _homeNavigatorKey.currentState!.pop();
+    if (index == _currentIndex && _currentIndex == 0 && _homeNavigatorKey.currentState.canPop()) {
+      _homeNavigatorKey.currentState.pop();
     }
-    if (index == _currentIndex && _currentIndex == 1 && _bibleNavigatorKey.currentState!.canPop()) {
-      _bibleNavigatorKey.currentState!.pop();
+    if (index == _currentIndex && _currentIndex == 1 && _bibleNavigatorKey.currentState.canPop()) {
+      _bibleNavigatorKey.currentState.pop();
     }
-    if (index == _currentIndex && _currentIndex == 2 && _churchNavigatorKey.currentState!.canPop()) {
-      _churchNavigatorKey.currentState!.pop();
+    if (index == _currentIndex && _currentIndex == 2 && _churchNavigatorKey.currentState.canPop()) {
+      _churchNavigatorKey.currentState.pop();
     }
-    if (index == _currentIndex && _currentIndex == 3 && _profileNavigatorKey.currentState!.canPop()) {
-      _profileNavigatorKey.currentState!.pop();
+    if (index == _currentIndex && _currentIndex == 3 && _profileNavigatorKey.currentState.canPop()) {
+      _profileNavigatorKey.currentState.pop();
     }
 
     setState(() {

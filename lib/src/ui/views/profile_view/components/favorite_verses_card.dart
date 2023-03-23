@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:bibliafree/src/ui/views/favorite_verses_view/favorite_verses_view.dart';
 
 class FavoriteVersesCard extends ConsumerWidget {
-  const FavoriteVersesCard({Key? key}) : super(key: key);
+  const FavoriteVersesCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,7 +25,7 @@ class FavoriteVersesCard extends ConsumerWidget {
             children: [
               Text(
                 'Versículos favoritos',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               const Icon(Iconsax.arrow_right_3),
             ],

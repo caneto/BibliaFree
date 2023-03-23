@@ -5,7 +5,7 @@ import 'package:bibliafree/src/ui/views/settings_view/settings_view.dart';
 
 class SettingsCard extends ConsumerWidget {
   const SettingsCard({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -27,7 +27,7 @@ class SettingsCard extends ConsumerWidget {
             children: [
               Text(
                 'Definições',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               const Icon(Iconsax.arrow_right_3),
             ],

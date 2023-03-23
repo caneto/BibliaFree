@@ -8,7 +8,7 @@ import 'package:bibliafree/src/ui/views/profile_view/components/profile_view_hea
 import 'package:bibliafree/src/ui/views/profile_view/components/settings_card.dart';
 
 class ProfileView extends ConsumerWidget {
-  const ProfileView({Key? key}) : super(key: key);
+  const ProfileView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

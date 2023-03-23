@@ -8,12 +8,12 @@ import 'package:bibliafree/src/providers/youtube_fetch_latest_church_video_futur
 
 class ChurchYouTubeChannelCard extends ConsumerWidget {
   const ChurchYouTubeChannelCard({
-    Key? key,
-    required this.index,
-    required this.uiElementCount,
-    required this.videoId,
-    required this.channelIds,
-    required this.channel,
+    Key key,
+    this.index,
+    this.uiElementCount,
+    this.videoId,
+    this.channelIds,
+    this.channel,
   }) : super(key: key);
 
   final int index;
@@ -108,14 +108,14 @@ class ChurchYouTubeChannelCard extends ConsumerWidget {
                   children: [
                     Text(
                       channelName(),
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                     ),
                     Text(
                       description(),
-                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                            color: !nowPlaying ? Theme.of(context).colorScheme.secondaryVariant : null,
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            color: !nowPlaying ? Theme.of(context).colorScheme.secondaryContainer : null,
                           ),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,

@@ -10,7 +10,7 @@ import 'package:bibliafree/src/providers/reader_settings_repository_provider.dar
 import 'package:bibliafree/src/providers/study_tools_repository_provider.dart';
 
 class VerseOfTheDayView extends ConsumerStatefulWidget {
-  const VerseOfTheDayView({Key? key, required this.verses}) : super(key: key);
+  const VerseOfTheDayView({Key key, this.verses}) : super(key: key);
 
   final List<Verse> verses;
 
@@ -52,9 +52,9 @@ class _VerseOfTheDayViewState extends ConsumerState<VerseOfTheDayView> {
     Widget _favoriteButton(BuildContext context) {
       Color heartColor() {
         if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-          return CantonDarkColors.red[400]!;
+          return CantonDarkColors.red[400];
         }
-        return CantonColors.red[400]!;
+        return CantonColors.red[400];
       }
 
       Icon icon() {
@@ -132,7 +132,7 @@ class _VerseOfTheDayViewState extends ConsumerState<VerseOfTheDayView> {
           padding: const EdgeInsets.symmetric(vertical: kSmallPadding),
           child: Text(
             'Verse of the Day',
-            style: Theme.of(context).textTheme.headline4?.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: CantonColors.white,
                   fontSize: 17,
                 ),
@@ -155,7 +155,7 @@ class _VerseOfTheDayViewState extends ConsumerState<VerseOfTheDayView> {
       String versesString() {
         var str = '';
         if (widget.verses.length > 1) {
-          str = widget.verses.first.verseId.toString() + ' - ' + widget.verses.last.verseId.toString();
+          str = '${widget.verses.first.verseId} - ${widget.verses.last.verseId}';
         } else {
           str = widget.verses[0].verseId.toString();
         }
@@ -164,8 +164,8 @@ class _VerseOfTheDayViewState extends ConsumerState<VerseOfTheDayView> {
       }
 
       return SelectableText(
-        widget.verses[0].book.name! + ' ' + widget.verses[0].chapterId.toString() + ':' + versesString(),
-        style: Theme.of(context).textTheme.headline6?.copyWith(
+        '${widget.verses[0].book.name} ${widget.verses[0].chapterId}:${versesString()}',
+        style: Theme.of(context).textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.w500,
               height: ref.watch(readerSettingsRepositoryProvider.notifier).bodyTextHeight,
               fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
@@ -184,9 +184,9 @@ class _VerseOfTheDayViewState extends ConsumerState<VerseOfTheDayView> {
                 constraints: const BoxConstraints(maxWidth: 600),
                 child: SelectableText.rich(
                   TextSpan(
-                    text: verse.verseId.toString() + ' ',
-                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                          color: Theme.of(context).colorScheme.secondaryVariant,
+                    text: '${verse.verseId} ',
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: Theme.of(context).colorScheme.secondaryContainer,
                           fontSize: ref.watch(readerSettingsRepositoryProvider).verseNumberSize * 1.5,
                           height: ref.watch(readerSettingsRepositoryProvider).verseNumberHeight,
                           fontFamily: ref.watch(readerSettingsRepositoryProvider).typeFace,
@@ -194,7 +194,7 @@ class _VerseOfTheDayViewState extends ConsumerState<VerseOfTheDayView> {
                     children: [
                       TextSpan(
                         text: (verse.text + (widget.verses.last == verse ? '' : ' ')),
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
+                        style: Theme.of(context).textTheme.headlineSmall.copyWith(
                               fontWeight: FontWeight.w400,
                               fontSize: ref.watch(readerSettingsRepositoryProvider.notifier).bodyTextSize * 1.5,
                               height: ref.watch(readerSettingsRepositoryProvider.notifier).bodyTextHeight,

@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
 import 'package:bibliafree/src/providers/local_user_repository_provider.dart';
 
 class ChangeBirthDateCard extends ConsumerWidget {
-  const ChangeBirthDateCard({Key? key}) : super(key: key);
+  const ChangeBirthDateCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -20,13 +20,13 @@ class ChangeBirthDateCard extends ConsumerWidget {
     final lastDate = DateTime.now();
     String currentBirthdayStr() {
       final bday = ref.watch(localUserRepositoryProvider).getUser.birthDate;
-      return 'Current Birthday: ' + (bday != null ? DateFormat('yMMMd').format(bday) : 'None');
+      return 'Current Birthday: ${bday != null ? DateFormat('yMMMd').format(bday) : 'None'}';
     }
 
     return CantonExpansionTile(
       title: Text(
         'Change Birthday',
-        style: Theme.of(context).textTheme.headline6,
+        style: Theme.of(context).textTheme.titleLarge,
       ),
       decoration: BoxDecoration(
         color: CantonMethods.alternateCanvasColorType3(context),

@@ -9,7 +9,7 @@ import 'package:bibliafree/src/ui/views/settings_view/components/change_last_nam
 import 'package:bibliafree/src/ui/views/settings_view/components/settings_view_header.dart';
 
 class SettingsView extends ConsumerWidget {
-  const SettingsView({Key? key}) : super(key: key);
+  const SettingsView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -54,7 +54,7 @@ class SettingsView extends ConsumerWidget {
           const SizedBox(height: kSmallPadding),
           Text(
             kVersionNumber,
-            style: Theme.of(context).textTheme.bodyText2?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w500,
                 ),
           ),

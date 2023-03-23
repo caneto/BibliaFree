@@ -5,7 +5,7 @@ import 'package:bibliafree/src/ui/views/bookmarked_chapters_view/bookmarked_chap
 
 class BookmarksCard extends ConsumerWidget {
   const BookmarksCard({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -27,7 +27,7 @@ class BookmarksCard extends ConsumerWidget {
             children: [
               Text(
                 'Favoritos',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               const Icon(Iconsax.arrow_right_3),
             ],

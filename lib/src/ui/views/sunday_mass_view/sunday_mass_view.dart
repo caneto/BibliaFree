@@ -13,7 +13,7 @@ import 'package:bibliafree/src/ui/views/sunday_mass_view/components/church_youtu
 import 'package:bibliafree/src/ui/views/sunday_mass_view/components/sunday_mass_view_header.dart';
 
 class SundayMassView extends ConsumerStatefulWidget {
-  const SundayMassView({Key? key}) : super(key: key);
+  const SundayMassView({Key key}) : super(key: key);
 
   @override
   ConsumerState<SundayMassView> createState() => _SundayMassViewState();
@@ -44,7 +44,7 @@ class _SundayMassViewState extends ConsumerState<SundayMassView> {
               Expanded(
                 child: Text(
                   'Cannot access Church at this time. Remember Jesus loves you!',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
             ],
@@ -62,7 +62,7 @@ class _SundayMassViewState extends ConsumerState<SundayMassView> {
           );
         }
 
-        final videoInfo = snapshot.data!;
+        final videoInfo = snapshot.data;
 
         final videoId = videoInfo[0] as String;
         final channel = videoInfo[1] as YouTubeChannel;
@@ -76,7 +76,7 @@ class _SundayMassViewState extends ConsumerState<SundayMassView> {
           ),
         );
 
-        final _ytPlayer = YoutubePlayerIFrame(controller: _ytController);
+        final _ytPlayer = YoutubePlayer(controller: _ytController);
 
         return ListView.builder(
           itemCount: channelIds.length + _uiElementCount,

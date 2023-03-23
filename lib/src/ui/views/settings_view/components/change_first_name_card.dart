@@ -4,20 +4,20 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:bibliafree/src/providers/local_user_repository_provider.dart';
 
 class ChangeFirstNameCard extends ConsumerWidget {
-  const ChangeFirstNameCard({Key? key}) : super(key: key);
+  const ChangeFirstNameCard({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final _controller = TextEditingController();
 
     String currentNameStr() {
-      return 'Current First Name: ' + ref.watch(localUserRepositoryProvider).getUser.firstName;
+      return 'Current First Name: ${ref.watch(localUserRepositoryProvider).getUser.firstName}';
     }
 
     return CantonExpansionTile(
       title: Text(
         'Change First Name',
-        style: Theme.of(context).textTheme.headline6,
+        style: Theme.of(context).textTheme.titleLarge,
       ),
       decoration: BoxDecoration(
         color: CantonMethods.alternateCanvasColorType3(context),
@@ -33,7 +33,7 @@ class ChangeFirstNameCard extends ConsumerWidget {
             children: [
               Text(
                 currentNameStr(),
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: 10),
               CantonTextInput(

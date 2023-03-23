@@ -10,7 +10,7 @@ import 'package:bibliafree/src/ui/views/current_view.dart';
 import 'package:bibliafree/src/ui/views/introduction_view/introduction_view.dart';
 
 class LoginWrapper extends ConsumerStatefulWidget {
-  const LoginWrapper({Key? key}) : super(key: key);
+  const LoginWrapper({Key key}) : super(key: key);
 
   @override
   ConsumerState<LoginWrapper> createState() => _LoginWrapperState();
@@ -33,7 +33,7 @@ class _LoginWrapperState extends ConsumerState<LoginWrapper> {
       if (Platform.isIOS) {
         return isDarkMode ? CantonColors.white : CantonColors.black;
       } else {
-        return isDarkMode ? CantonColors.gray[900]! : CantonColors.white;
+        return isDarkMode ? CantonColors.gray[900] : CantonColors.white;
       }
     }
 
